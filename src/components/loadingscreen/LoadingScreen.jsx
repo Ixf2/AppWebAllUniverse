@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./LoadingScreen.css";
-import ArtemisLogo from "../../data/images/logo.png";
+import ArtemisLogo from "../../data/images/logo.svg";
 
 const loadingTexts = [
   "Initializing Artemis II systems...",
