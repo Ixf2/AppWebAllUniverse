@@ -5,7 +5,7 @@ import {
   FaTwitter,
   FaTwitch,
   FaGithub,
-  FaRocket,
+  FaStar,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section footer-brand">
             <h3>
-              <FaRocket className="brand-icon" />
+              <FaStar className="brand-icon" />
               AllUniverse
             </h3>
             <p>
@@ -65,6 +65,14 @@ function Footer() {
 
               <a
                 href="https://github.com/Ixf2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://github.com/sdvictorvergara"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
