@@ -50,11 +50,7 @@ export async function createNews({
 export async function getNews({ max = 20 } = {}) {
   const ref = collection(db, "news");
 
-  const q = query(
-    ref,
-    orderBy("createdAt", "desc"),
-    limit(max)
-  );
+  const q = query(ref, orderBy("createdAt", "desc"), limit(max));
 
   const snap = await getDocs(q);
 

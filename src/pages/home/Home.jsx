@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
+import Card from "../../components/card/Card";
 import {
   getNews,
   getNewsByCategoryID,
@@ -38,62 +39,47 @@ function Home() {
     loadNews();
   }, [selectedCategory]);
 
+  const categories = [
+    { id: "all", label: "All" },
+    { id: NEWS_CATEGORY_IDS.PLANETS, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.PLANETS] },
+    { id: NEWS_CATEGORY_IDS.STARS, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.STARS] },
+    { id: NEWS_CATEGORY_IDS.NEBULAE, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.NEBULAE] },
+    { id: NEWS_CATEGORY_IDS.MISSIONS, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.MISSIONS] },
+    { id: NEWS_CATEGORY_IDS.BLACK_HOLES, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.BLACK_HOLES] },
+  ];
+
   return (
     <>
       {/* <Header /> */}
 
       <main className="home">
         <section className="news-section">
-          <div className="news-header">
-            <h2>Latest News</h2>
+          <div className="news-top">
+            <h2 className="news-title">Latest News</h2>
 
-            <div className="news-filter">
-              <label htmlFor="categoryFilter">Category</label>
-              <select
-                id="categoryFilter"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-              >
-                <option value="all">All</option>
-                <option value={NEWS_CATEGORY_IDS.PLANETS}>
-                  {NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.PLANETS]}
-                </option>
-                <option value={NEWS_CATEGORY_IDS.STARS}>
-                  {NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.STARS]}
-                </option>
-                <option value={NEWS_CATEGORY_IDS.NEBULAE}>
-                  {NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.NEBULAE]}
-                </option>
-                <option value={NEWS_CATEGORY_IDS.MISSIONS}>
-                  {NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.MISSIONS]}
-                </option>
-                <option value={NEWS_CATEGORY_IDS.BLACK_HOLES}>
-                  {NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.BLACK_HOLES]}
-                </option>
-              </select>
+            <div className="categories-list">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  className={`category-button ${
+                    selectedCategory === category.id ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  {category.label}
+                </button>
+              ))}
             </div>
           </div>
 
           {loading ? (
             <p className="news-message">Loading news...</p>
           ) : news.length === 0 ? (
-            <p className="news-message">No news found in this category.</p>
+            <p className="news-message">No news available in this category.</p>
           ) : (
             <div className="news-grid">
               {news.map((item) => (
-                <article key={item.id} className="news-card">
-                  <img
-                    src={item.imageURL}
-                    alt={item.title}
-                    className="news-image"
-                  />
-
-                  <div className="news-content">
-                    <span className="news-category">{item.categoryLabel}</span>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                </article>
+                <Card key={item.id} item={item} />
               ))}
             </div>
           )}
