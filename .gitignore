@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase config sensible
+.env
+.env.local
+
+# Firebase hosting cache
+.firebase/
+
+# Firebase debug logs
+firebase-debug.log*
+
+# Archivos de configuración local
+.firebaserc
+
+# Node modules
+node_modules/
