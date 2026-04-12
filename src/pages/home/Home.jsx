@@ -15,6 +15,14 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("all");
 
+  const categories = [
+    { id: "all", label: "All" },
+    ...Object.values(NEWS_CATEGORY_IDS).map((id) => ({
+      id,
+      label: NEWS_CATEGORY_LABELS[id],
+    })),
+  ];
+
   useEffect(() => {
     async function loadNews() {
       setLoading(true);
@@ -28,9 +36,11 @@ function Home() {
           data = await getNewsByCategoryID(selectedCategory, { max: 6 });
         }
 
+        console.log("NEWS DATA:", data);
         setNews(data);
       } catch (error) {
         console.error("Error loading news:", error);
+        setNews([]);
       } finally {
         setLoading(false);
       }
@@ -38,15 +48,6 @@ function Home() {
 
     loadNews();
   }, [selectedCategory]);
-
-  const categories = [
-    { id: "all", label: "All" },
-    { id: NEWS_CATEGORY_IDS.PLANETS, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.PLANETS] },
-    { id: NEWS_CATEGORY_IDS.STARS, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.STARS] },
-    { id: NEWS_CATEGORY_IDS.NEBULAE, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.NEBULAE] },
-    { id: NEWS_CATEGORY_IDS.MISSIONS, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.MISSIONS] },
-    { id: NEWS_CATEGORY_IDS.BLACK_HOLES, label: NEWS_CATEGORY_LABELS[NEWS_CATEGORY_IDS.BLACK_HOLES] },
-  ];
 
   return (
     <>
@@ -56,20 +57,6 @@ function Home() {
         <section className="news-section">
           <div className="news-top">
             <h2 className="news-title">Latest News</h2>
-
-            <div className="categories-list">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  className={`category-button ${
-                    selectedCategory === category.id ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedCategory(category.id)}
-                >
-                  {category.label}
-                </button>
-              ))}
-            </div>
           </div>
 
           {loading ? (

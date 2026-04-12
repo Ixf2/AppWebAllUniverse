@@ -26,6 +26,14 @@ export const NEWS_CATEGORY_LABELS = Object.freeze({
   [NEWS_CATEGORY_IDS.BLACK_HOLES]: "Black Holes",
 });
 
+function createSlug(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
+}
+
 export async function createNews({
   title,
   description,
@@ -41,6 +49,7 @@ export async function createNews({
     imageURL,
     categoryID,
     categoryLabel,
+    slug_id: createSlug(title),
     createdAt: serverTimestamp(),
   });
 
@@ -49,9 +58,7 @@ export async function createNews({
 
 export async function getNews({ max = 20 } = {}) {
   const ref = collection(db, "news");
-
   const q = query(ref, orderBy("createdAt", "desc"), limit(max));
-
   const snap = await getDocs(q);
 
   return snap.docs.map((d) => ({
