@@ -5,11 +5,12 @@
 }
 
 body {
-  background-color: #030014;
+  background-color: #0b0f1a;
 }
 
 :root {
     /* Header colors */
-    --header-container-color: white;
+    --header-container-color: #76709527;
+    --header-container-shadow-color: rgba(23, 69, 105, 0.5);
     --letter-color: #067fca;
 }
