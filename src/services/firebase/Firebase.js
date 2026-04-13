@@ -3,12 +3,13 @@ import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+ apiKey: "AIzaSyA4o0S_TAOZHbtJsJPIOoHFBWLrvTpmj_g",
+  authDomain: "appweballuniverse.firebaseapp.com",
+  databaseURL: "https://appweballuniverse-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "appweballuniverse",
+  storageBucket: "appweballuniverse.firebasestorage.app",
+  messagingSenderId: "395926709460",
+  appId: "1:395926709460:web:d8e5d0935eb830bcc38741"
 };
 
 const app = initializeApp(firebaseConfig);
