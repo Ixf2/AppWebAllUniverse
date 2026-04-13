@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+body {
+  background-color: #030014;
+}
+
+:root {
+    /* Header colors */
+    --header-container-color: white;
+    --letter-color: #067fca;
+}
