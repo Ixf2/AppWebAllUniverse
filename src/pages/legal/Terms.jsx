@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 import videoTermsLegal from "../../data/video/terms-and-legal.mp4";
-import "./Terms";
+import "./Terms.css";
 
 export default function Terms() {
   const videoRef = useRef(null);
