@@ -32,9 +32,9 @@
     0 10px 30px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out;
   will-change: transform;
 }
 
@@ -105,8 +105,8 @@
   object-fit: cover;
   display: block;
   transition:
-    transform 0.5s ease,
-    filter 0.5s ease;
+    transform 0.22s ease-out,
+    filter 0.22s ease-out;
   filter: saturate(1.05) brightness(0.92);
 }
 
@@ -199,7 +199,6 @@
   opacity: 1;
 }
 
-/* TABLET */
 @media (max-width: 1024px) {
   .news-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -241,7 +240,6 @@
   }
 }
 
-/* MÓVIL */
 @media (max-width: 768px) {
   .news-grid {
     grid-template-columns: 1fr;
@@ -298,7 +296,6 @@
   }
 }
 
-/* MÓVIL PEQUEÑO */
 @media (max-width: 480px) {
   .news-grid {
     gap: 1rem;
