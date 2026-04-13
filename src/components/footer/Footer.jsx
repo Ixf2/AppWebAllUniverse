@@ -85,9 +85,10 @@ function Footer() {
           <div className="footer-section">
             <h4>Navigation</h4>
             <Link to="/home">Home</Link>
-            <Link to="/artemisII">Artemis II</Link>
+            <Link to="/missions">Missions</Link>
             <Link to="/elements">Elements</Link>
-            <Link to="/legal">Legal and Terms</Link>
+            <Link to="/legal">Legal</Link>
+            <Link to="/terms">Terms</Link>
             <a
               href="https://www.figma.com/design/xlkFNEcoQXmrIBsRgxbjTj/AppWebAllUniverse?node-id=0-1&m=dev&t=6OJ86lnrmOukx51v-1"
               target="_blank"
