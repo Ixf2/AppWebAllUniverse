@@ -1,0 +1,127 @@
+.legal-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-page {
+  position: relative;
+  flex: 1; 
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legal-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: block;
+}
+
+.legal-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.legal-ui {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legal-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* NUEVO: contenedor de texto */
+.legal-text-container {
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.legal-text-container h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.legal-text-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* BOTÓN (se mantiene igual) */
+.legal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  min-height: 50px;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #7d0000 0%, #b30000 50%, #d60000 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.18);
+  transition: all 0.25s ease;
+}
+
+.legal-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 0 26px rgba(255, 0, 0, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .legal-button {
+    min-width: 220px;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-text-container h1 {
+    font-size: 2rem;
+  }
+
+  .legal-text-container p {
+    font-size: 1rem;
+  }
+
+  .legal-button {
+    min-width: 200px;
+  }
+}
