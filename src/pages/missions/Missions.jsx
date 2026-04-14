@@ -4,6 +4,7 @@ import Footer from "../../components/footer/Footer";
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 import NewsMissions from "../../components/news-missions/NewsMissions";
 import { getMissions } from "../../services/firebase/NewsMissions";
+import heroMissions from "../../data/images/missions-hero.jpeg";
 import "./Missions.css";
 
 export default function Missions() {
@@ -28,6 +29,15 @@ export default function Missions() {
         <LoadingScreen />
       ) : (
         <main className="missions-page">
+          <div className="missions-hero">
+            <img
+              src={heroMissions}
+              alt="Space missions"
+              className="missions-hero-image"
+            />
+            <div className="missions-hero-overlay"></div>
+          </div>
+
           <div className="missions-page-header">
             <h1 className="missions-page-title">Space Missions</h1>
             <p className="missions-page-description">
