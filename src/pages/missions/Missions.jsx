@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import Header from "../../components/header/Header"
 import Footer from "../../components/footer/Footer";
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
-import NewsMissions from "../../components/news-elements/NewsElements";
+import NewsMissions from "../../components/news-missions/NewsMissions";
 import { getMissions } from "../../services/firebase/NewsMissions";
 import heroMissions from "../../data/images/missions-hero.jpeg";
 import "./Missions.css";
@@ -38,7 +38,6 @@ export default function Missions() {
 
             <div className="missions-hero-overlay"></div>
 
-            {/* TEXTO ENCIMA */}
             <div className="missions-hero-text">
               <h2>In honor of the pioneers</h2>
               <p>
