@@ -190,7 +190,7 @@
   border-radius: 999px;
   background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
   box-shadow: 0 0 18px rgba(129, 140, 248, 0.4);
-  transition: width 0.25s ease;
+  transition: width 0.05s linear;
 }
 
 .percentage {

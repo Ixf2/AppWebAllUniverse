@@ -21,7 +21,7 @@ export default function LoadingScreen({ onFinish, duration = 3500 }) {
   const startTimeRef = useRef(Date.now());
   const finishedRef = useRef(false);
 
-  const MIN_DURATION = 3500;
+  const MIN_DURATION = duration;
   const CLOSING_DURATION = 1000;
 
   useEffect(() => {

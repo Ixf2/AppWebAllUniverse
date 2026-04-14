@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 // import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
-import videoTermsLegal from "../../data/video/terms-and-legal.mp4";
+import videoTermsLegal from "../../data/video/terms-and-legal2.mp4";
 import "./Legal.css";
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 

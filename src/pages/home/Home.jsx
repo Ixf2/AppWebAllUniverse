@@ -53,26 +53,31 @@ function Home() {
   return (
     <>
       {/* <Header /> */}
-      <LoadingScreen />
-      <main className="home">
-        <section className="news-section">
-          <div className="news-top">
-            <h2 className="news-title">Latest News</h2>
-          </div>
-
-          {loading ? (
-            <p className="news-message">Loading news...</p>
-          ) : news.length === 0 ? (
-            <p className="news-message">No news available in this category.</p>
-          ) : (
-            <div className="news-grid">
-              {news.map((item) => (
-                <Card key={item.id} item={item} />
-              ))}
+      {loading ? (
+        <LoadingScreen duration={1800} />
+      ) : (
+        <main className="home">
+          <section className="news-section">
+            <div className="news-top">
+              <h2 className="news-title">Latest News</h2>
             </div>
-          )}
-        </section>
-      </main>
+
+            {loading ? (
+              <p className="news-message">Loading news...</p>
+            ) : news.length === 0 ? (
+              <p className="news-message">
+                No news available in this category.
+              </p>
+            ) : (
+              <div className="news-grid">
+                {news.map((item) => (
+                  <Card key={item.id} item={item} />
+                ))}
+              </div>
+            )}
+          </section>
+        </main>
+      )}
 
       <Footer />
     </>
