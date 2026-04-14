@@ -1,34 +1,191 @@
 .scroll-top-btn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
+  bottom: 28px;
+  right: 28px;
+  width: 64px;
+  height: 64px;
   border: none;
-
-  background: linear-gradient(135deg, #41015a, #6d0886);
-  color: white;
-  font-size: 1.4rem;
-  font-weight: bold;
-
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #24395f 0%, #11182b 55%, #0a0f1f 100%);
+  color: #ffffff;
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px) scale(0.9);
-  pointer-events: none;
-
-  box-shadow: 0 0 18px rgba(98, 3, 110, 0.3);
-  transition: all 0.3s ease;
   z-index: 999;
+  box-shadow:
+    0 0 18px rgba(77, 163, 255, 0.18),
+    0 0 28px rgba(155, 89, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  opacity: 0.9;
+  transform: scale(1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 
 .scroll-top-btn.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
+  opacity: 0.95;
 }
 
 .scroll-top-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 28px rgba(184, 2, 175, 0.5);
+  transform: scale(1.08);
+  opacity: 1;
+  box-shadow:
+    0 0 24px rgba(77, 163, 255, 0.26),
+    0 0 34px rgba(155, 89, 255, 0.18),
+    0 0 50px rgba(77, 163, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.scroll-top-btn:active {
+  transform: scale(0.96);
+}
+
+.orbit-core {
+  position: relative;
+  z-index: 3;
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #f5f8ff;
+  text-shadow:
+    0 0 10px rgba(77, 163, 255, 0.35),
+    0 0 16px rgba(255, 255, 255, 0.15);
+}
+
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid rgba(77, 163, 255, 0.28);
+  z-index: 1;
+}
+
+.orbit-ring-1 {
+  width: 82px;
+  height: 82px;
+  animation: orbitSpin 7s linear infinite;
+}
+
+.orbit-ring-2 {
+  width: 98px;
+  height: 56px;
+  border-color: rgba(155, 89, 255, 0.24);
+  transform: rotate(65deg);
+  animation: orbitSpinTilt 9s linear infinite reverse;
+}
+
+.orbit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.orbit-dot-1 {
+  color: #6fc3ff;
+  background: #6fc3ff;
+  top: -9px;
+  left: 50%;
+  margin-left: -4px;
+  animation: orbitDot1 7s linear infinite;
+}
+
+.orbit-dot-2 {
+  color: #b07bff;
+  background: #b07bff;
+  top: 50%;
+  left: -9px;
+  margin-top: -4px;
+  animation: orbitDot2 9s linear infinite reverse;
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinTilt {
+  from {
+    transform: rotate(65deg) rotate(0deg);
+  }
+  to {
+    transform: rotate(65deg) rotate(360deg);
+  }
+}
+
+@keyframes orbitDot1 {
+  from {
+    transform: rotate(0deg) translateY(-41px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateY(-41px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitDot2 {
+  from {
+    transform: rotate(0deg) translateX(-49px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(-49px) rotate(-360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-top-btn {
+    width: 56px;
+    height: 56px;
+    bottom: 22px;
+    right: 22px;
+  }
+
+  .orbit-core {
+    font-size: 1.15rem;
+  }
+
+  .orbit-ring-1 {
+    width: 72px;
+    height: 72px;
+  }
+
+  .orbit-ring-2 {
+    width: 86px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-top-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .orbit-core {
+    font-size: 1rem;
+  }
+
+  .orbit-ring-1 {
+    width: 64px;
+    height: 64px;
+  }
+
+  .orbit-ring-2 {
+    width: 76px;
+    height: 42px;
+  }
+
+  .orbit-dot {
+    width: 7px;
+    height: 7px;
+  }
 }

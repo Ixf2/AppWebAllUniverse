@@ -1,17 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./ScrollToTopButton.css";
 
 export default function ScrollToTopButton() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setVisible(window.scrollY > 300); 
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [visible] = useState(true);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -24,8 +15,14 @@ export default function ScrollToTopButton() {
     <button
       className={`scroll-top-btn ${visible ? "show" : ""}`}
       onClick={scrollToTop}
+      aria-label="Scroll to top"
+      title="Back to top"
     >
-      ↑
+      <span className="orbit-core">↑</span>
+      <span className="orbit-ring orbit-ring-1"></span>
+      <span className="orbit-ring orbit-ring-2"></span>
+      <span className="orbit-dot orbit-dot-1"></span>
+      <span className="orbit-dot orbit-dot-2"></span>
     </button>
   );
 }
