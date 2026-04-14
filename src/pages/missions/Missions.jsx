@@ -5,6 +5,7 @@ import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 import NewsMissions from "../../components/news-missions/NewsMissions";
 import { getMissions } from "../../services/firebase/NewsMissions";
 import heroMissions from "../../data/images/missions-hero.jpeg";
+import VideoPopup from "../../components/windows-modal/WindowsModal";
 import "./Missions.css";
 
 export default function Missions() {
@@ -44,6 +45,8 @@ export default function Missions() {
                 Thanks to Laika, Félicette and Ham, whose courage made space
                 exploration possible.
               </p>
+
+              <VideoPopup />
             </div>
           </div>
 
