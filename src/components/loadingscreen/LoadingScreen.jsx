@@ -13,7 +13,11 @@ const loadingTexts = [
   "Launching universe explorer...",
 ];
 
-export default function LoadingScreen({ onFinish, duration = 4000 }) {
+export default function LoadingScreen({
+  onFinish,
+  duration = 4000,
+  isDataLoaded = false,
+}) {
   const [progress, setProgress] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [closing, setClosing] = useState(false);
@@ -27,7 +31,10 @@ export default function LoadingScreen({ onFinish, duration = 4000 }) {
   useEffect(() => {
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) return 100;
+        // Mientras Firebase no haya terminado, no dejamos que llegue a 100
+        const maxProgress = isDataLoaded ? 100 : 95;
+
+        if (prev >= maxProgress) return maxProgress;
 
         let increment = 0;
 
@@ -38,12 +45,12 @@ export default function LoadingScreen({ onFinish, duration = 4000 }) {
         else increment = 0.2;
 
         const next = prev + increment;
-        return next >= 100 ? 100 : next;
+        return next >= maxProgress ? maxProgress : next;
       });
     }, 100);
 
     return () => clearInterval(progressInterval);
-  }, []);
+  }, [isDataLoaded]);
 
   useEffect(() => {
     const textInterval = setInterval(() => {
@@ -54,7 +61,9 @@ export default function LoadingScreen({ onFinish, duration = 4000 }) {
   }, []);
 
   useEffect(() => {
-    if (progress < 100 || finishedRef.current) return;
+    if (!isDataLoaded) return;
+    if (progress < 100) return;
+    if (finishedRef.current) return;
 
     finishedRef.current = true;
 
@@ -72,7 +81,7 @@ export default function LoadingScreen({ onFinish, duration = 4000 }) {
     }, remaining);
 
     return () => clearTimeout(finishTimeout);
-  }, [progress, onFinish, MIN_DURATION]);
+  }, [progress, isDataLoaded, onFinish, MIN_DURATION]);
 
   return (
     <div className={`loading-screen ${closing ? "closing" : ""}`}>
