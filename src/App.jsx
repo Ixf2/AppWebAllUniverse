@@ -7,10 +7,14 @@ import Legal from "./pages/legal/Legal"
 import Terms from "./pages/legal/Terms"
 import NotFound from "./pages/notfound/Notfound"
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
+import ScrollToTopButton from "./components/scroll-to-top-button/ScrollToTopButton";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
