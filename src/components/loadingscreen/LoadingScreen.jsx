@@ -13,7 +13,7 @@ const loadingTexts = [
   "Launching universe explorer...",
 ];
 
-export default function LoadingScreen({ onFinish, duration = 3500 }) {
+export default function LoadingScreen({ onFinish, duration = 7000 }) {
   const [progress, setProgress] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [closing, setClosing] = useState(false);
@@ -29,7 +29,7 @@ export default function LoadingScreen({ onFinish, duration = 3500 }) {
       setProgress((prev) => {
         if (prev >= 100) return 100;
 
-        let increment;
+        let increment = 0;
 
         if (prev < 25) increment = 2.4;
         else if (prev < 50) increment = 1.6;
@@ -72,7 +72,7 @@ export default function LoadingScreen({ onFinish, duration = 3500 }) {
     }, remaining);
 
     return () => clearTimeout(finishTimeout);
-  }, [progress, onFinish]);
+  }, [progress, onFinish, MIN_DURATION]);
 
   return (
     <div className={`loading-screen ${closing ? "closing" : ""}`}>
@@ -83,9 +83,28 @@ export default function LoadingScreen({ onFinish, duration = 3500 }) {
       <div className="planet planet-2"></div>
       <div className="orbit-ring"></div>
 
+      <div className="moon"></div>
+
+      <div className="rocket-scene">
+        <div className="rocket">
+          <div className="rocket-trail"></div>
+          <div className="rocket-flame"></div>
+          <div className="rocket-engine"></div>
+          <div className="rocket-fin rocket-fin-top"></div>
+          <div className="rocket-fin rocket-fin-bottom"></div>
+
+          <div className="rocket-main">
+            <div className="rocket-window"></div>
+            <div className="rocket-stripe"></div>
+          </div>
+
+          <div className="rocket-nose"></div>
+        </div>
+      </div>
+
       <div className="loading-content">
         <div className="logo-container">
-          <img src={ArtemisLogo} alt="Artemis II" className="logo" />
+          <img src={ArtemisLogo} alt="Artemis II logo" className="logo" />
         </div>
 
         <h1 className="title">Artemis II</h1>

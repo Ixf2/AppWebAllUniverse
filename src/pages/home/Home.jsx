@@ -54,7 +54,7 @@ function Home() {
     <>
       {/* <Header /> */}
       {loading ? (
-        <LoadingScreen duration={1800} />
+        <LoadingScreen duration={7000} />
       ) : (
         <main className="home">
           <section className="news-section">
