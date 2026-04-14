@@ -13,7 +13,7 @@ const loadingTexts = [
   "Launching universe explorer...",
 ];
 
-export default function LoadingScreen({ onFinish, duration = 7000 }) {
+export default function LoadingScreen({ onFinish, duration = 4000 }) {
   const [progress, setProgress] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [closing, setClosing] = useState(false);
