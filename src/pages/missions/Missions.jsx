@@ -35,7 +35,17 @@ export default function Missions() {
               alt="Space missions"
               className="missions-hero-image"
             />
+
             <div className="missions-hero-overlay"></div>
+
+            {/* TEXTO ENCIMA */}
+            <div className="missions-hero-text">
+              <h2>In honor of the pioneers</h2>
+              <p>
+                Thanks to Laika, Félicette and Ham, whose courage made space
+                exploration possible.
+              </p>
+            </div>
           </div>
 
           <div className="missions-page-header">
