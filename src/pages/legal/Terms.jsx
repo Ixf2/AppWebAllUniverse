@@ -4,6 +4,7 @@ import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 import videoTermsLegal from "../../data/video/terms-and-legal.mp4";
 import "./Terms.css";
+import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 
 export default function Terms() {
   const videoRef = useRef(null);
@@ -17,6 +18,8 @@ export default function Terms() {
   return (
     <>
     {/* <Headers /> */}
+    <LoadingScreen />
+
    <div className="terms-layout">
   <main className="terms-page">
     <video

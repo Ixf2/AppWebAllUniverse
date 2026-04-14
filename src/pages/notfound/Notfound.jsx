@@ -17,7 +17,6 @@ export default function NotFound() {
   return (
     <div className="notfound-layout">
       {/* <Header /> */}
-
       <main className="notfound-page">
         <video
           ref={videoRef}
