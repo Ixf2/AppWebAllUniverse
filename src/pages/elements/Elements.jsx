@@ -9,7 +9,7 @@ import {
   getPlanets,
   getStars,
 } from "../../services/firebase/NewsElements";
-import heroElements from "../../data/images/elements-hero.jpeg";
+import heroElements from "../../data/images/elements-hero1.jpeg";
 import "./Elements.css";
 
 export default function Elements() {
