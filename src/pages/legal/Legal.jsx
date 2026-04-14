@@ -35,29 +35,23 @@ export default function Legal() {
         <div className="legal-ui">
           <div className="legal-content-box">
             <div className="legal-text-container">
-              <h1>Terms and Conditions</h1>
+              <h1>Legal Notice</h1>
               <p>
-                Welcome to AppWebAllUniverse. By accessing or using this
-                website, you agree to be bound by these Terms and Conditions.
-                All content, including text, images, videos, and data related to
-                planets, stars, and other celestial objects, is provided for
-                educational and informational purposes only and may not be
-                copied, reproduced, or distributed without prior permission. All
-                materials, including design and media, are the intellectual
-                property of AppWebAllUniverse unless otherwise stated. While we
-                strive to provide accurate and up-to-date information, we do not
-                guarantee the completeness or reliability of the content, and
-                scientific data may evolve over time. Some visual
-                representations may be artistic or simulated and may not reflect
-                real-time appearances. Users agree not to use the website for
-                illegal purposes, attempt unauthorized access, or disrupt its
-                functionality. This website may include links to third-party
-                sites, for which we are not responsible. AppWebAllUniverse shall
-                not be liable for any damages arising from the use of this
-                website, and all content is provided "as is" without warranties.
-                We reserve the right to modify these Terms at any time, and
-                continued use of the site implies acceptance of any changes. For
-                questions, please contact us through the website.
+                This website, AppWebAllUniverse, is owned and operated for educational and informational purposes related to astronomy, space exploration, and the universe.
+
+All content published on this website, including text, images, videos, graphics, and data about planets, stars, nebulae, black holes, and other celestial objects, is the intellectual property of AppWebAllUniverse unless otherwise stated. Unauthorized reproduction, distribution, or modification of any content is strictly prohibited without prior written consent.
+
+The information provided on this website is intended for general knowledge and educational use. While we strive to ensure accuracy and keep content up to date, we do not guarantee the completeness, reliability, or precision of the information. Scientific knowledge evolves over time, and some representations may be simplified, artistic, or simulated.
+
+Users agree to use this website responsibly and not engage in activities that may harm, disrupt, or compromise its functionality, security, or accessibility. Any attempt to gain unauthorized access to the system or misuse the platform is strictly forbidden.
+
+This website may include links to third-party websites. AppWebAllUniverse is not responsible for the content, policies, or practices of external sites.
+
+To the maximum extent permitted by law, AppWebAllUniverse shall not be held liable for any damages or losses resulting from the use or inability to use this website or its content.
+
+We reserve the right to modify this Legal Notice at any time without prior notice. Continued use of the website implies acceptance of any updates.
+
+For any inquiries, please contact us through the website.
               </p>
             </div>
 

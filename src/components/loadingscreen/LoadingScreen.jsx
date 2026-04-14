@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./LoadingScreen.css";
 import ArtemisLogo from "../../data/images/logo.svg";
 
@@ -13,18 +13,34 @@ const loadingTexts = [
   "Launching universe explorer...",
 ];
 
-export default function LoadingScreen({ onFinish }) {
+export default function LoadingScreen({ onFinish, duration = 3500 }) {
   const [progress, setProgress] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [closing, setClosing] = useState(false);
 
+  const startTimeRef = useRef(Date.now());
+  const finishedRef = useRef(false);
+
+  const MIN_DURATION = 3500;
+  const CLOSING_DURATION = 1000;
+
   useEffect(() => {
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
-        const next = prev + 5;
+        if (prev >= 100) return 100;
+
+        let increment;
+
+        if (prev < 25) increment = 2.4;
+        else if (prev < 50) increment = 1.6;
+        else if (prev < 75) increment = 0.9;
+        else if (prev < 90) increment = 0.45;
+        else increment = 0.2;
+
+        const next = prev + increment;
         return next >= 100 ? 100 : next;
       });
-    }, 180);
+    }, 100);
 
     return () => clearInterval(progressInterval);
   }, []);
@@ -38,15 +54,24 @@ export default function LoadingScreen({ onFinish }) {
   }, []);
 
   useEffect(() => {
-    if (progress === 100) {
+    if (progress < 100 || finishedRef.current) return;
+
+    finishedRef.current = true;
+
+    const elapsed = Date.now() - startTimeRef.current;
+    const remaining = Math.max(0, MIN_DURATION - elapsed);
+
+    const finishTimeout = setTimeout(() => {
       setClosing(true);
 
-      const timeout = setTimeout(() => {
+      const closeTimeout = setTimeout(() => {
         if (onFinish) onFinish();
-      }, 1000);
+      }, CLOSING_DURATION);
 
-      return () => clearTimeout(timeout);
-    }
+      return () => clearTimeout(closeTimeout);
+    }, remaining);
+
+    return () => clearTimeout(finishTimeout);
   }, [progress, onFinish]);
 
   return (
@@ -79,7 +104,7 @@ export default function LoadingScreen({ onFinish }) {
           </div>
         </div>
 
-        <p className="percentage">{progress}%</p>
+        <p className="percentage">{Math.floor(progress)}%</p>
 
         <div className="loading-dots">
           <span></span>

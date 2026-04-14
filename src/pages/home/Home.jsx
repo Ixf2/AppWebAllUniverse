@@ -9,6 +9,7 @@ import {
   NEWS_CATEGORY_LABELS,
 } from "../../services/firebase/NewsArticles";
 import "./Home.css";
+import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 
 function Home() {
   const [news, setNews] = useState([]);
@@ -52,7 +53,7 @@ function Home() {
   return (
     <>
       {/* <Header /> */}
-
+      <LoadingScreen />
       <main className="home">
         <section className="news-section">
           <div className="news-top">
