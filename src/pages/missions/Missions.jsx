@@ -1,7 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+// import Header from "../../components/header/Header"
+import Footer from "../../components/footer/Footer";
+import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
+import NewsMissions from "../../components/news-missions/NewsMissions";
+import { getMissions } from "../../services/firebase/NewsMissions";
+import "./Missions.css";
 
-export default function AboutUs() {
+export default function Missions() {
+  const [missions, setMissions] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadMissions() {
+      const data = await getMissions();
+      setMissions(data);
+      setLoading(false);
+    }
+
+    loadMissions();
+  }, []);
+
   return (
-    <div>AboutUs</div>
-  )
+    <>
+      {/* <Header /> */}
+
+      {loading ? (
+        <LoadingScreen />
+      ) : (
+        <main className="missions-page">
+          <div className="missions-page-header">
+            <h1 className="missions-page-title">Space Missions</h1>
+            <p className="missions-page-description">
+              Explore legendary missions, breakthrough discoveries, and the
+              spacecraft that changed our understanding of the universe.
+            </p>
+          </div>
+
+          <div className="missions-page-content">
+            <NewsMissions missions={missions} />
+          </div>
+        </main>
+      )}
+
+      <Footer />
+    </>
+  );
 }

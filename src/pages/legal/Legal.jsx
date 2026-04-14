@@ -10,47 +10,65 @@ export default function Legal() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.6; 
+      videoRef.current.playbackRate = 0.6;
     }
   }, []);
 
   return (
     <div className="legal-layout">
-  {/* <Header /> */}
+      {/* <Header /> */}
 
-  <main className="legal-page">
-    <video
-      ref={videoRef}
-      className="legal-video"
-      src={videoTermsLegal}
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-    />
+      <main className="legal-page">
+        <video
+          ref={videoRef}
+          className="legal-video"
+          src={videoTermsLegal}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        />
 
-    <div className="legal-overlay"></div>
+        <div className="legal-overlay"></div>
 
-    <div className="legal-ui">
-  <div className="legal-content-box">
+        <div className="legal-ui">
+          <div className="legal-content-box">
+            <div className="legal-text-container">
+              <h1>Terms and Conditions</h1>
+              <p>
+                Welcome to AppWebAllUniverse. By accessing or using this
+                website, you agree to be bound by these Terms and Conditions.
+                All content, including text, images, videos, and data related to
+                planets, stars, and other celestial objects, is provided for
+                educational and informational purposes only and may not be
+                copied, reproduced, or distributed without prior permission. All
+                materials, including design and media, are the intellectual
+                property of AppWebAllUniverse unless otherwise stated. While we
+                strive to provide accurate and up-to-date information, we do not
+                guarantee the completeness or reliability of the content, and
+                scientific data may evolve over time. Some visual
+                representations may be artistic or simulated and may not reflect
+                real-time appearances. Users agree not to use the website for
+                illegal purposes, attempt unauthorized access, or disrupt its
+                functionality. This website may include links to third-party
+                sites, for which we are not responsible. AppWebAllUniverse shall
+                not be liable for any damages arising from the use of this
+                website, and all content is provided "as is" without warranties.
+                We reserve the right to modify these Terms at any time, and
+                continued use of the site implies acceptance of any changes. For
+                questions, please contact us through the website.
+              </p>
+            </div>
 
-    <div className="legal-text-container">
-      <h1>Terms and Conditions</h1>
-      <p>
-            Welcome to AppWebAllUniverse. By accessing or using this website, you agree to be bound by these Terms and Conditions. All content, including text, images, videos, and data related to planets, stars, and other celestial objects, is provided for educational and informational purposes only and may not be copied, reproduced, or distributed without prior permission. All materials, including design and media, are the intellectual property of AppWebAllUniverse unless otherwise stated. While we strive to provide accurate and up-to-date information, we do not guarantee the completeness or reliability of the content, and scientific data may evolve over time. Some visual representations may be artistic or simulated and may not reflect real-time appearances. Users agree not to use the website for illegal purposes, attempt unauthorized access, or disrupt its functionality. This website may include links to third-party sites, for which we are not responsible. AppWebAllUniverse shall not be liable for any damages arising from the use of this website, and all content is provided "as is" without warranties. We reserve the right to modify these Terms at any time, and continued use of the site implies acceptance of any changes. For questions, please contact us through the website.
-      </p>
+            <Link to="/" className="legal-button">
+              RETURN TO EARTH
+            </Link>
+          </div>
+        </div>
+      </main>
+
+      <Footer />
     </div>
-
-    <Link to="/" className="legal-button">
-      RETURN TO EARTH
-    </Link>
-
-  </div>
-</div>
-  </main>
-
-  <Footer />
-</div>
   );
 }
