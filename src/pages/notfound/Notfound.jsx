@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-// import Header from "../../components/header/Header";
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 import videoNotFound from "../../data/video/notfound.mp4";
@@ -16,7 +16,7 @@ export default function NotFound() {
 
   return (
     <div className="notfound-layout">
-      {/* <Header /> */}
+      <Header />
       <main className="notfound-page">
         <video
           ref={videoRef}

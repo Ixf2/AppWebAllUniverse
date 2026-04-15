@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Header from "../../components/header/Header";
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Card from "../../components/card/Card";
 import {
@@ -52,7 +52,7 @@ function Home() {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       {loading ? (
         <LoadingScreen duration={7000} />
       ) : (

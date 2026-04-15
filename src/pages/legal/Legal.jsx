@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-// import Header from "../../components/header/Header";
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { Link } from "react-router-dom";
 import videoTermsLegal from "../../data/video/terms-and-legal2.mp4";
@@ -17,7 +17,7 @@ export default function Legal() {
 
   return (
     <div className="legal-layout">
-      {/* <Header /> */}
+      <Header />
       <LoadingScreen isDataLoaded={true} />
       <main className="legal-page">
         <video
