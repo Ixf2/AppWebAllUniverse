@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../components/footer/Footer";
+// import Header from "../../components/header/Header"
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 import NewsElements from "../../components/news-elements/NewsElements";
 import {
@@ -47,6 +48,7 @@ export default function Elements() {
 
   return (
     <>
+    {/* <Header /> */}
       {loading ? (
         <LoadingScreen />
       ) : (
