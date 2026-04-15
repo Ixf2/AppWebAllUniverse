@@ -31,7 +31,6 @@ export default function LoadingScreen({
   useEffect(() => {
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
-        // Mientras Firebase no haya terminado, no dejamos que llegue a 100
         const maxProgress = isDataLoaded ? 100 : 95;
 
         if (prev >= maxProgress) return maxProgress;

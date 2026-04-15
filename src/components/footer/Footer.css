@@ -130,14 +130,12 @@
   font-size: 0.95rem;
 }
 
-/* Pantallas grandes */
 @media (min-width: 1600px) {
   .footer-container {
     max-width: 1500px;
   }
 }
 
-/* Tablet */
 @media (max-width: 900px) {
   .footer-container {
     padding: 0 1.25rem;
@@ -153,7 +151,6 @@
   }
 }
 
-/* Móvil */
 @media (max-width: 480px) {
   .footer {
     padding: 2rem 0 1.25rem;
