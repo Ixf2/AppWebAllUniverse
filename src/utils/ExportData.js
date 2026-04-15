@@ -19,12 +19,12 @@ function escapeXML(value) {
     .replace(/'/g, "&apos;");
 }
 
-export function exportToJSON(data, fileName = "planets.json") {
+export function exportToJSON(data, fileName = "data.json") {
   const json = JSON.stringify(data, null, 2);
   downloadFile(json, fileName, "application/json");
 }
 
-export function exportToCSV(data, fileName = "planets.csv") {
+export function exportToCSV(data, fileName = "data.csv") {
   if (!data.length) return;
 
   const headers = [...new Set(data.flatMap(item => Object.keys(item)))];
@@ -40,20 +40,25 @@ export function exportToCSV(data, fileName = "planets.csv") {
   downloadFile(csv, fileName, "text/csv");
 }
 
-export function exportToXML(data, fileName = "planets.xml") {
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<planets>\n`;
+export function exportToXML(
+  data,
+  fileName = "data.xml",
+  rootName = "items",
+  itemName = "item"
+) {
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<${rootName}>\n`;
 
   for (const item of data) {
-    xml += `  <planet>\n`;
+    xml += `  <${itemName}>\n`;
 
     for (const [key, value] of Object.entries(item)) {
       xml += `    <${key}>${escapeXML(value)}</${key}>\n`;
     }
 
-    xml += `  </planet>\n`;
+    xml += `  </${itemName}>\n`;
   }
 
-  xml += `</planets>`;
+  xml += `</${rootName}>`;
 
   downloadFile(xml, fileName, "application/xml");
 }

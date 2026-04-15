@@ -3,17 +3,39 @@ import { exportToJSON, exportToCSV, exportToXML } from "../../utils/ExportData";
 function NewsElements({ title, elements = [], type }) {
   if (!elements.length) return null;
 
+  const xmlConfig = {
+    planets: { root: "planets", item: "planet" },
+    stars: { root: "stars", item: "star" },
+    nebulae: { root: "nebulae", item: "nebula" },
+    black_hole: { root: "blackHoles", item: "blackHole" },
+  };
+
   return (
     <section className="elements-section">
       <div className="elements-section-header">
         <h2 className="elements-section-title">{title}</h2>
-        {type === "planets" && (
-          <div className="export-buttons">
-            <button onClick={() => exportToJSON(elements)}>JSON</button>
-            <button onClick={() => exportToCSV(elements)}>CSV</button>
-            <button onClick={() => exportToXML(elements)}>XML</button>
-          </div>
-        )}
+        <div className="export-buttons">
+          <button onClick={() => exportToJSON(elements, `${type}.json`)}>
+            JSON
+          </button>
+
+          <button onClick={() => exportToCSV(elements, `${type}.csv`)}>
+            CSV
+          </button>
+
+          <button
+            onClick={() =>
+              exportToXML(
+                elements,
+                `${type}.xml`,
+                xmlConfig[type].root,
+                xmlConfig[type].item,
+              )
+            }
+          >
+            XML
+          </button>
+        </div>
       </div>
 
       <div className="elements-grid">
