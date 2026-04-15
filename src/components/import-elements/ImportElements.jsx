@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { importJSONFile} from "../../utils-elements/importData"
-
+import { importJSONFile, importCSVFile } from "../../utils-elements/Import";
 
 function ImportElements({ type }) {
   const [loading, setLoading] = useState(false);
+  const [format, setFormat] = useState("json");
 
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
@@ -11,11 +11,19 @@ function ImportElements({ type }) {
 
     try {
       setLoading(true);
-      await importJSONFile(file, type);
+
+      if (format === "json") {
+        await importJSONFile(file, type);
+      }
+
+      if (format === "csv") {
+        await importCSVFile(file, type);
+      }
+
       alert("Import completed successfully");
     } catch (error) {
       console.error("Import error:", error);
-      alert("Error importing JSON file");
+      alert("Error importing file");
     } finally {
       setLoading(false);
       e.target.value = "";
@@ -24,9 +32,18 @@ function ImportElements({ type }) {
 
   return (
     <div className="import-elements">
+      <select
+        value={format}
+        onChange={(e) => setFormat(e.target.value)}
+        disabled={loading}
+      >
+        <option value="json">JSON</option>
+        <option value="csv">CSV</option>
+      </select>
+
       <input
         type="file"
-        accept=".json"
+        accept=".json,.csv"
         onChange={handleFileChange}
         disabled={loading}
       />

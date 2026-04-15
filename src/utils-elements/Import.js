@@ -25,3 +25,19 @@ export async function importJSONFile(file, collectionName) {
   const data = JSON.parse(text);
   await importArrayToFirestore(data, collectionName);
 }
+
+export async function importCSVFile(file, collectionName) {
+  const text = await file.text();
+
+  const result = Papa.parse(text, {
+    header: true,
+    skipEmptyLines: true,
+  });
+
+  if (result.errors.length) {
+    console.error("CSV parse errors:", result.errors);
+    throw new Error("Error parsing CSV file");
+  }
+
+  await importArrayToFirestore(result.data, collectionName);
+}
