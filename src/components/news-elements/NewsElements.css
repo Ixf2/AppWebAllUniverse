@@ -208,7 +208,27 @@
   word-break: break-word;
 }
 
-/* TABLET */
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.export-buttons button {
+  background: #0b1a2f;
+  color: white;
+  border: 1px solid #3b82f6;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.export-buttons button:hover {
+  background: #3b82f6;
+}
+
+
+
 @media (max-width: 1024px) {
   .elements-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -257,7 +277,6 @@
   }
 }
 
-/* MÓVIL */
 @media (max-width: 768px) {
   .elements-grid {
     grid-template-columns: 1fr;
@@ -308,7 +327,6 @@
   }
 }
 
-/* MÓVIL PEQUEÑO */
 @media (max-width: 480px) {
   .elements-grid {
     gap: 1rem;
