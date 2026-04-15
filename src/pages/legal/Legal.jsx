@@ -18,7 +18,7 @@ export default function Legal() {
   return (
     <div className="legal-layout">
       {/* <Header /> */}
-      <LoadingScreen />
+      <LoadingScreen isDataLoaded={true} />
       <main className="legal-page">
         <video
           ref={videoRef}
@@ -28,7 +28,7 @@ export default function Legal() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
         />
 
         <div className="legal-overlay"></div>
