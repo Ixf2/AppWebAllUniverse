@@ -1,4 +1,5 @@
 import { collection, doc, setDoc, addDoc } from "firebase/firestore";
+import Papa from "papaparse";
 import { db } from "../services/firebase/Firebase";
 
 export async function importArrayToFirestore(data, collectionName) {
@@ -40,4 +41,30 @@ export async function importCSVFile(file, collectionName) {
   }
 
   await importArrayToFirestore(result.data, collectionName);
+}
+
+export async function importXMLFile(file, collectionName, itemTag = "item") {
+  const text = await file.text();
+
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(text, "application/xml");
+
+  const parserError = xmlDoc.querySelector("parsererror");
+  if (parserError) {
+    throw new Error("Invalid XML file");
+  }
+
+  const nodes = [...xmlDoc.getElementsByTagName(itemTag)];
+
+  const data = nodes.map((node) => {
+    const obj = {};
+
+    [...node.children].forEach((child) => {
+      obj[child.tagName] = child.textContent;
+    });
+
+    return obj;
+  });
+
+  await importArrayToFirestore(data, collectionName);
 }
