@@ -1,5 +1,8 @@
 import "./NewsElements.css";
-import { exportToJSON, exportToCSV, exportToXML } from "../../utils/ExportData";
+import { exportToJSON, exportToCSV, exportToXML } from "../../utils-elements/ExportData";
+import ImportElements from "../import-elements/ImportElements";
+
+
 function NewsElements({ title, elements = [], type }) {
   if (!elements.length) return null;
 
@@ -36,6 +39,7 @@ function NewsElements({ title, elements = [], type }) {
             XML
           </button>
         </div>
+        <ImportElements type={type} />
       </div>
 
       <div className="elements-grid">
