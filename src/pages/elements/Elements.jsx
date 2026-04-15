@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import Header from "../../components/header/Header"
 import Footer from "../../components/footer/Footer";
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 import NewsElements from "../../components/news-elements/NewsElements";
@@ -19,35 +18,35 @@ export default function Elements() {
   const [stars, setStars] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function loadElements() {
-      try {
-        const [blackHolesData, nebulaeData, planetsData, starsData] =
-          await Promise.all([
-            getBlackHoles(),
-            getNebulae(),
-            getPlanets(),
-            getStars(),
-          ]);
+  async function loadElements() {
+    try {
+      setLoading(true);
 
-        setBlackHoles(blackHolesData);
-        setNebulae(nebulaeData);
-        setPlanets(planetsData);
-        setStars(starsData);
-      } catch (error) {
-        console.error("Error loading elements:", error);
-      } finally {
-        setLoading(false);
-      }
+      const [blackHolesData, nebulaeData, planetsData, starsData] =
+        await Promise.all([
+          getBlackHoles(),
+          getNebulae(),
+          getPlanets(),
+          getStars(),
+        ]);
+
+      setBlackHoles(blackHolesData);
+      setNebulae(nebulaeData);
+      setPlanets(planetsData);
+      setStars(starsData);
+    } catch (error) {
+      console.error("Error loading elements:", error);
+    } finally {
+      setLoading(false);
     }
+  }
 
+  useEffect(() => {
     loadElements();
   }, []);
 
   return (
     <>
-      {/* <Header /> */}
-
       {loading ? (
         <LoadingScreen />
       ) : (
@@ -80,13 +79,33 @@ export default function Elements() {
           </div>
 
           <div className="elements-page-content">
-            <NewsElements title="Black Holes" elements={blackHoles} type="black_hole" />
+            <NewsElements
+              title="Black Holes"
+              elements={blackHoles}
+              type="black_hole"
+              onRefresh={loadElements}
+            />
 
-            <NewsElements title="Nebulae" elements={nebulae} type="nebulae" />
+            <NewsElements
+              title="Nebulae"
+              elements={nebulae}
+              type="nebulae"
+              onRefresh={loadElements}
+            />
 
-            <NewsElements title="Planets" elements={planets} type="planets" />
+            <NewsElements
+              title="Planets"
+              elements={planets}
+              type="planets"
+              onRefresh={loadElements}
+            />
 
-            <NewsElements title="Stars" elements={stars} type="stars" />
+            <NewsElements
+              title="Stars"
+              elements={stars}
+              type="stars"
+              onRefresh={loadElements}
+            />
           </div>
         </main>
       )}

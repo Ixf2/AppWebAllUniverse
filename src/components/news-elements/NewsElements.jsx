@@ -7,7 +7,7 @@ import {
 } from "../../utils-elements/ExportData";
 import ImportElements from "../import-elements/ImportElements";
 
-function NewsElements({ title, elements = [], type }) {
+function NewsElements({ title, elements = [], type, onRefresh }) {
   const [isImportOpen, setIsImportOpen] = useState(false);
 
   if (!elements.length) return null;
@@ -170,7 +170,12 @@ function NewsElements({ title, elements = [], type }) {
 
             <ImportElements
               type={type}
-              onImported={() => setIsImportOpen(false)}
+              onImported={async () => {
+                setIsImportOpen(false);
+                if (onRefresh) {
+                  await onRefresh();
+                }
+              }}
             />
           </div>
         </div>
