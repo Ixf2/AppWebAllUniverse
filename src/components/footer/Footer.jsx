@@ -85,8 +85,8 @@ function Footer() {
           <div className="footer-section">
             <h4>Navigation</h4>
             <Link to="/home">Home</Link>
-            <Link to="/missions">Missions</Link>
             <Link to="/elements">Elements</Link>
+            <Link to="/missions">Missions</Link>
             <Link to="/legal">Legal</Link>
             <Link to="/terms">Terms</Link>
             <a
