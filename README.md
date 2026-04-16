@@ -1,16 +1,183 @@
-# React + Vite
+# 🌌 AllWebAllUniverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Description
 
-Currently, two official plugins are available:
+**AllWebAllUniverse** is a web application focused on exploring the universe. It provides structured information about different cosmic elements such as planets, stars, nebulae, and black holes, along with their characteristics and curiosities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The platform also includes a missions section that highlights important space explorations and a commemorative tribute dedicated to the animals whose sacrifice contributed to humanity’s progress in space exploration.
 
-## React Compiler
+🔗 **Live Demo:** https://appweballuniverse.web.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
+## 📸 Screenshots
 
-## Expanding the ESLint configuration
+### 🏠 Home
+![Home](./screenshots/home.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🌌 Elements
+![Elements](./screenshots/elements.png)
+
+### 🚀 Missions
+![Missions](./screenshots/missions.png)
+
+---
+
+## 🚀 Features
+
+- 🌍 Exploration of universe elements:
+  - Planets
+  - Stars
+  - Nebulae
+  - Black holes
+
+- 🛰️ Space missions section with historical content
+
+- 🐾 Tribute page dedicated to animals like Laika, Félicette, and Ham
+
+- 🔄 Data management:
+  - Import and export data in **JSON, XML, and CSV**
+  - Direct integration with **Firebase Firestore**
+
+- ⚡ Dynamic content loading
+
+- 🎨 Custom **Loading Screen** built with CSS
+
+- 📄 Legal and Terms pages
+
+---
+
+## 🧱 Technologies Used
+
+- **Frontend**
+  - React
+  - Vite
+  - React Router DOM
+  - React Icons
+
+- **Backend / Services**
+  - Firebase
+  - Firebase Firestore
+  - Firebase Hosting
+
+- **Data Handling**
+  - JSON
+  - XML (via `xml2js`)
+  - CSV (via `papaparse`)
+
+- **Development Tools**
+  - ESLint
+
+---
+
+## 📂 Project Structure (Simplified)
+src/
+├── components/
+├── pages/
+│ ├── Home
+│ ├── Elements
+│ ├── Missions
+│ ├── Legal
+│ ├── Terms
+│ └── About
+├── data/
+├── services/
+└── App.jsx
+
+---
+
+---
+
+## 🔧 Installation & Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Ixf2/AppWebAllUniverse.git
+```
+
+2. Move into the project folder:
+```bash
+cd AppWebAllUniverse
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Run the development server:
+```bash
+npm run dev
+```
+
+---
+## Build for Production
+```bash
+npm run build
+```
+Preview the production build:
+```bash
+npm run preview
+```
+
+## Deployment
+This project if gully deployed using Firebase Hosting.
+To deploy manually:
+```bash
+firebase deploy --only hosting
+```
+
+## Data Source
+All data is stored and managed using:
+- Firebase Firestore
+
+The application support improting structured data formats:
+- JSON
+- XML
+- CSV
+
+## Purpose
+The main goal of this project is to:
+- Provide educational content about the universe.
+- Demonstrate integration of modern web technologies.
+- Practice data handling and cloud-based sotrage (Firebase).
+- Honor the historical contribution of animals in space exploration.
+---
+## 🧱 Technologies Used
+
+- **Frontend**
+  - React
+  - Vite
+  - React Router DOM
+  - React Icons
+
+- **Backend / Services**
+  - Firebase
+  - Firebase Firestore
+  - Firebase Hosting
+
+- **Data Handling**
+  - JSON
+  - XML (via `DOMParse`)
+  - CSV (via `papaparse`)
+
+- **Design**
+  - Figma [https://www.figma.com/design/xlkFNEcoQXmrIBsRgxbjTj/AppWebAllUniverse?node-id=0-1&t=jYGTppR5exQJ0MGX-1]
+
+- **Development Tools**
+  - ESLint
+
+---
+## License
+This project is licensed under the ISC Lincense
+
+---
+
+## Authors
+- Developed by Ixf2
+GitHub: https://github.com/Ixf2
+
+- Developed by SdVictorvergara
+GitHub: https://github.com/sdvictorvergara
+
+
