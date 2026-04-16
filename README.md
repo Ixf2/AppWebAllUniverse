@@ -1,15 +1,15 @@
-# 🌌 AllWebAllUniverse
+#  AllWebAllUniverse
 
-## 📖 Description
+##  Description
 
 **AllWebAllUniverse** is a web application focused on exploring the universe. It provides structured information about different cosmic elements such as planets, stars, nebulae, and black holes, along with their characteristics and curiosities.
 
 The platform also includes a missions section that highlights important space explorations and a commemorative tribute dedicated to the animals whose sacrifice contributed to humanity’s progress in space exploration.
 
-🔗 **Live Demo:** https://appweballuniverse.web.app
+ **Live Demo:** https://appweballuniverse.web.app
 
 ---
-## 📸 Screenshots
+##  Screenshots
 
 ###  Home
 ![Home](./screenshot/home.png)
@@ -40,31 +40,31 @@ The platform also includes a missions section that highlights important space ex
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🌍 Exploration of universe elements:
+-  Exploration of universe elements:
   - Planets
   - Stars
   - Nebulae
   - Black holes
 
-- 🛰️ Space missions section with historical content
+-  Space missions section with historical content
 
-- 🐾 Tribute page dedicated to animals like Laika, Félicette, and Ham
+-  Tribute page dedicated to alls animals, like Laika, Félicette, and Ham
 
-- 🔄 Data management:
+-  Data management:
   - Import and export data in **JSON, XML, and CSV**
   - Direct integration with **Firebase Firestore**
 
-- ⚡ Dynamic content loading
+-  Dynamic content loading
 
-- 🎨 Custom **Loading Screen** built with CSS
+-  Custom **Loading Screen** built with CSS
 
-- 📄 Legal and Terms pages
+-  Legal and Terms pages
 
 ---
 
-## 🧱 Technologies Used
+##  Technologies Used
 
 - **Frontend**
   - React
@@ -79,7 +79,7 @@ The platform also includes a missions section that highlights important space ex
 
 - **Data Handling**
   - JSON
-  - XML (via `xml2js`)
+  - XML (via `DOMPaper`)
   - CSV (via `papaparse`)
 
 - **Development Tools**
@@ -87,25 +87,25 @@ The platform also includes a missions section that highlights important space ex
 
 ---
 
-## 📂 Project Structure (Simplified)
-src/
-├── components/
-├── pages/
-│ ├── Home
-│ ├── Elements
-│ ├── Missions
-│ ├── Legal
-│ ├── Terms
-│ └── About
-├── data/
-├── services/
-└── App.jsx
+##  Project Structure (Simplified)
+src/ 
+├── components/ 
+├── pages/ 
+│ ├── Home 
+│ ├── Elements 
+│ ├── Missions 
+│ ├── Legal 
+│ ├── Terms 
+│ └── About 
+├── data/ 
+├── services/ 
+└── App.jsx 
 
 ---
 
 ---
 
-## 🔧 Installation & Setup
+##  Installation & Setup
 
 1. Clone the repository:
 
@@ -160,30 +160,6 @@ The main goal of this project is to:
 - Demonstrate integration of modern web technologies.
 - Practice data handling and cloud-based sotrage (Firebase).
 - Honor the historical contribution of animals in space exploration.
----
-## 🧱 Technologies Used
-
-- **Frontend**
-  - React
-  - Vite
-  - React Router DOM
-  - React Icons
-
-- **Backend / Services**
-  - Firebase
-  - Firebase Firestore
-  - Firebase Hosting
-
-- **Data Handling**
-  - JSON
-  - XML (via `DOMParse`)
-  - CSV (via `papaparse`)
-
-- **Design**
-  - Figma [https://www.figma.com/design/xlkFNEcoQXmrIBsRgxbjTj/AppWebAllUniverse?node-id=0-1&t=jYGTppR5exQJ0MGX-1]
-
-- **Development Tools**
-  - ESLint
 
 ---
 ## License
