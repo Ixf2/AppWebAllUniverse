@@ -11,14 +11,32 @@ The platform also includes a missions section that highlights important space ex
 ---
 ## 📸 Screenshots
 
-### 🏠 Home
-![Home](./screenshots/home.png)
+###  Home
+![Home](./screenshot/home.png)
 
-### 🌌 Elements
-![Elements](./screenshots/elements.png)
+### Footer
+![Footer](./screenshot/footer.png)
 
-### 🚀 Missions
-![Missions](./screenshots/missions.png)
+###  Elements
+![Elements](./screenshot/elements.png)
+![Elements ](./screenshot/elements1.png)
+![Elements](./screenshot/elements2.png)
+
+
+###  Missions
+![Missions](./screenshot/missions.png)
+![Missions](./screenshot/missions1.png)
+
+### LoadingScreen
+![LoadingScreen](./screenshot/loadinscreen.png)
+
+### Legal
+![Legal](./screenshot/legal.png)
+
+### Terms
+![Terms](./screenshot/terms.png)
+
+
 
 ---
 
