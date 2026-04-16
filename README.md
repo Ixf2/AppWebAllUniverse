@@ -87,19 +87,33 @@ The platform also includes a missions section that highlights important space ex
 
 ---
 
-##  Project Structure (Simplified)
-src/ <br>
-├── components/ <br>
-├── pages/ <br>
-│ ├── Home <br>
-│ ├── Elements <br>
-│ ├── Missions <br>
-│ ├── Legal <br>
-│ ├── Terms <br>
-│ └── About <br>
-├── data/ <br>
-├── services/ <br>
-└── App.jsx <br>
+##  Project Structure
+└───src <br>
+    ├───assets <br>
+    ├───components <br>
+    │   ├───card <br>
+    │   ├───footer <br>
+    │   ├───header <br>
+    │   ├───import-elements <br>
+    │   ├───loadingscreen <br>
+    │   ├───news-elements <br>
+    │   ├───news-missions <br>
+    │   ├───scroll-to-top <br>
+    │   ├───scroll-to-top-button <br>
+    │   └───windows-modal <br>
+    ├───data
+    │   ├───images <br>
+    │   └───video <br>
+    ├───pages <br>
+    │   ├───aboutus <br>
+    │   ├───elements <br>
+    │   ├───home <br>
+    │   ├───legal <br>
+    │   ├───missions <br>
+    │   └───notfound <br>
+    ├───services <br>
+    │   └───firebase <br>
+    └───utils-elements <br>
 
 ---
 
