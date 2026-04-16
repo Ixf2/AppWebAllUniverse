@@ -42,8 +42,7 @@ export default function Missions() {
             <div className="missions-hero-text">
               <h2>In honor of the pioneers</h2>
               <p>
-                Thanks to Laika, Félicette and Ham, whose courage made space
-                exploration possible.
+                In honor of all the animals whose sacrifice made space exploration possible. They will always shine in space, like Laika, Félicette and Ham.
               </p>
 
               <VideoPopup />
