@@ -189,3 +189,47 @@ GitHub: https://github.com/Ixf2
 GitHub: https://github.com/sdvictorvergara
 
 
+---
+##  References
+
+###  Technologies & Documentation
+- React Documentation: https://react.dev/
+- Vite Documentation: https://vitejs.dev/
+- Firebase Documentation: https://firebase.google.com/docs
+- Firebase Firestore: https://firebase.google.com/docs/firestore
+- React Router DOM: https://reactrouter.com/
+- React Icons: https://react-icons.github.io/react-icons/
+- PapaParse (CSV): https://www.papaparse.com/
+- DOMPaper (XML DOMpaper): https://developer.mozilla.org/es/docs/Web/API/DOMParser
+
+###  Design
+- Figma: https://www.figma.com/
+
+###  Space & Astronomy Sources
+- NASA Official Website: https://www.nasa.gov/
+- ESA (European Space Agency): https://www.esa.int/
+- Hubble Space Telescope: https://hubblesite.org/
+- NASA Solar System Exploration: https://solarsystem.nasa.gov/
+
+##  Tribute & Historical References
+This project includes a tribute to the animals that contributed to space exploration.
+- NASA – The Story of Ham (first chimpanzee in space):  
+  https://www.nasa.gov/mission_pages/mercury/missions/ham.html
+
+- NASA – Early Human Spaceflight (context including animal missions):  
+  https://www.nasa.gov/mission_pages/mercury/
+
+- Laika (first dog in orbit – Sputnik 2):  
+  https://en.wikipedia.org/wiki/Laika
+
+- Félicette (first cat in space):  
+  https://en.wikipedia.org/wiki/F%C3%A9licette
+
+- Animals in Space (general overview):  
+  https://en.wikipedia.org/wiki/Animals_in_space
+
+- National Air and Space Museum – Animals in Space:  
+  https://airandspace.si.edu/explore/stories/animals-space
+
+## Videos
+- Credits for Astronova [https://www.tiktok.com/@astronovas_?lang=es-419]
