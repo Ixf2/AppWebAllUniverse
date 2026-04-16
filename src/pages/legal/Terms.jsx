@@ -17,7 +17,7 @@ export default function Terms() {
 
   return (
     <>
-      <Headers />
+      <Header />
       <LoadingScreen isDataLoaded={true} />
 
       <div className="terms-layout">
