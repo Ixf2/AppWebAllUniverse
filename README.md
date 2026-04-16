@@ -88,18 +88,18 @@ The platform also includes a missions section that highlights important space ex
 ---
 
 ##  Project Structure (Simplified)
-src/ 
-├── components/ 
-├── pages/ 
-│ ├── Home 
-│ ├── Elements 
-│ ├── Missions 
-│ ├── Legal 
-│ ├── Terms 
-│ └── About 
-├── data/ 
-├── services/ 
-└── App.jsx 
+src/ <br>
+├── components/ <br>
+├── pages/ <br>
+│ ├── Home <br>
+│ ├── Elements <br>
+│ ├── Missions <br>
+│ ├── Legal <br>
+│ ├── Terms <br>
+│ └── About <br>
+├── data/ <br>
+├── services/ <br>
+└── App.jsx <br>
 
 ---
 
