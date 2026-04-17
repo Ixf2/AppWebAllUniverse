@@ -5,6 +5,7 @@ import { FaStar, FaRocket, FaGlobe, FaSatellite } from "react-icons/fa";
 import AvatarJoana from "../../data/images/avatar-joana.png"
 import AvatarVictor from "../../data/images/avatar-victor.jpg"
 import "./AboutUs.css";
+import LoadingScreen from "../../components/loadingscreen/LoadingScreen"
 
 const team = [
   {
@@ -32,7 +33,7 @@ export default function AboutUs() {
   return (
     <>
       <Header />
-
+      <LoadingScreen isDataLoaded={true}/>
       <main className="about-page">
 
         <section className="about-hero">
