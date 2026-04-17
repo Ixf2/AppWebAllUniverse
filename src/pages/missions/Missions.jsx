@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../components/header/Header"
+import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen";
 import NewsMissions from "../../components/news-missions/NewsMissions";
@@ -12,13 +12,19 @@ export default function Missions() {
   const [missions, setMissions] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function loadMissions() {
+  async function loadMissions() {
+    try {
+      setLoading(true);
       const data = await getMissions();
       setMissions(data);
+    } catch (error) {
+      console.error("Error loading missions:", error);
+    } finally {
       setLoading(false);
     }
+  }
 
+  useEffect(() => {
     loadMissions();
   }, []);
 
@@ -42,7 +48,9 @@ export default function Missions() {
             <div className="missions-hero-text">
               <h2>In honor of the pioneers</h2>
               <p>
-                In honor of all the animals whose sacrifice made space exploration possible. They will always shine in space, like Laika, Félicette and Ham.
+                In honor of all the animals whose sacrifice made space
+                exploration possible. They will always shine in space, like
+                Laika, Félicette and Ham.
               </p>
 
               <VideoPopup />
@@ -58,7 +66,7 @@ export default function Missions() {
           </div>
 
           <div className="missions-page-content">
-            <NewsMissions missions={missions} />
+            <NewsMissions missions={missions} onRefresh={loadMissions} />
           </div>
         </main>
       )}

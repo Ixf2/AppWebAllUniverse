@@ -210,3 +210,96 @@
     font-size: 0.84rem;
   }
 }
+
+.missions-section-header {
+  margin-bottom: 1.2rem;
+}
+
+.missions-section-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 4px solid rgba(77, 163, 255, 0.7);
+  padding-left: 0.8rem;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.export-buttons button {
+  background: #0b1a2f;
+  color: white;
+  border: 1px solid #3b82f6;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.export-buttons button:hover {
+  background: #3b82f6;
+}
+
+.import-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.import-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.import-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.import-modal-title {
+  margin: 0 0 10px;
+  color: white;
+}
+
+.import-modal-text {
+  margin: 0 0 20px;
+  color: #cbd5e1;
+}
+
+.import-missions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.import-missions select,
+.import-missions input[type="file"] {
+  background: #111827;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+}

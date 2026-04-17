@@ -1,0 +1,16 @@
+.import-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.import-status.loading {
+  color: #facc15;
+}
+
+.import-status.success {
+  color: #22c55e;
+}
+
+.import-status.error {
+  color: #ef4444;
+}
