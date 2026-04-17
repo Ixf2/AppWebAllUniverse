@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { FaStar, FaRocket, FaGlobe, FaSatellite } from "react-icons/fa";
-import AvatarJoana from "../../data/images/box-logo.png"
-import AvatarVictor from "../../data/images/box-logo.png"
+import AvatarJoana from "../../data/images/avatar-joana.png"
+import AvatarVictor from "../../data/images/avatar-victor.jpg"
 import "./AboutUs.css";
 
 const team = [
