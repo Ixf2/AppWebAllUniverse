@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planets>
+  <planet>
+    <id>Earth</id>
+    <name>Earth</name>
+    <temperature>~15°C</temperature>
+    <diameter>1 Earth radius</diameter>
+    <distanceFromEarth>0 km</distanceFromEarth>
+    <imageURL>https://cdn.mos.cms.futurecdn.net/v2/t:0,l:160,cw:960,ch:720,q:80,w:960/FaWKMJQnr2PFcYCmEyfiTm.jpg</imageURL>
+    <type>Terrestrial</type>
+    <constellation>N/A</constellation>
+    <notableFeature>Only known planet with life</notableFeature>
+    <slug_id>earth</slug_id>
+    <mass>1 Earth mass</mass>
+    <shortDescription>Our home planet, rich in water and life.</shortDescription>
+    <discovered>Known since antiquity</discovered>
+    <hostStar>Sun</hostStar>
+    <featured>true</featured>
+  </planet>
+  <planet>
+    <id>HD_189733_b</id>
+    <type>Hot Jupiter</type>
+    <imageURL>https://www.nasa.gov/wp-content/uploads/2023/03/heic1312a.jpg</imageURL>
+    <name>HD 189733 b</name>
+    <temperature>~1,000°C</temperature>
+    <diameter>~1.14 Jupiter radii</diameter>
+    <distanceFromEarth>64 light years</distanceFromEarth>
+    <shortDescription>A deep blue planet where winds reach extreme speeds and glass rains sideways.</shortDescription>
+    <discovered>2005</discovered>
+    <hostStar>HD 189733</hostStar>
+    <featured>true</featured>
+    <constellation>Vulpecula</constellation>
+    <notableFeature>Glass rain and extreme winds</notableFeature>
+    <slug_id>hd-189733-b</slug_id>
+    <mass>1.13 Jupiter masses</mass>
+  </planet>
+  <planet>
+    <id>Jupiter</id>
+    <shortDescription>The largest planet in the Solar System, a massive gas giant.</shortDescription>
+    <hostStar>Sun</hostStar>
+    <discovered>Known since antiquity</discovered>
+    <featured>true</featured>
+    <constellation>N/A</constellation>
+    <notableFeature>Great Red Spot storm</notableFeature>
+    <slug_id>jupiter</slug_id>
+    <mass>317.8 Earth masses</mass>
+    <type>Gas Giant</type>
+    <imageURL>https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter_OPAL_2024.png</imageURL>
+    <name>Jupiter</name>
+    <temperature>~-145°C</temperature>
+    <distanceFromEarth>628 million km</distanceFromEarth>
+    <diameter>11.2 Earth radii</diameter>
+  </planet>
+  <planet>
+    <id>Kepler-22b</id>
+    <diameter>~2.4 times Earth</diameter>
+    <distanceFromEarth>600 light years</distanceFromEarth>
+    <temperature>~22°C (estimated)</temperature>
+    <name>Kepler-22b</name>
+    <imageURL>https://assets.science.nasa.gov/dynamicimage/assets/science/astro/exo-explore/2024/03/Kepler22b.jpg?w=1600&amp;h=900&amp;fit=clip&amp;crop=faces%2Cfocalpoint</imageURL>
+    <type>Super-Earth</type>
+    <mass>Unknown</mass>
+    <slug_id>kepler-22b</slug_id>
+    <notableFeature>Located in the habitable zone</notableFeature>
+    <constellation>Cygnus</constellation>
+    <featured>true</featured>
+    <discovered>2011</discovered>
+    <hostStar>Kepler-22</hostStar>
+    <shortDescription>One of the first exoplanets found in the habitable zone of its star.</shortDescription>
+  </planet>
+  <planet>
+    <id>Mars</id>
+    <distanceFromEarth>225 million km</distanceFromEarth>
+    <diameter>0.53 Earth radii</diameter>
+    <name>Mars</name>
+    <temperature>~-60°C</temperature>
+    <imageURL>https://space-facts.com/wp-content/uploads/mars-v2.jpg</imageURL>
+    <type>Terrestrial</type>
+    <notableFeature>Home to Olympus Mons, the largest volcano</notableFeature>
+    <slug_id>mars</slug_id>
+    <mass>0.107 Earth masses</mass>
+    <constellation>N/A</constellation>
+    <hostStar>Sun</hostStar>
+    <discovered>Known since antiquity</discovered>
+    <featured>true</featured>
+    <shortDescription>A cold desert world with signs of ancient water.</shortDescription>
+  </planet>
+  <planet>
+    <id>Mercury</id>
+    <type>Terrestrial</type>
+    <imageURL>https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg</imageURL>
+    <diameter>0.38 Earth radii</diameter>
+    <distanceFromEarth>77 million km</distanceFromEarth>
+    <temperature>-173°C to 427°C</temperature>
+    <name>Mercury</name>
+    <featured>false</featured>
+    <discovered>Known since antiquity</discovered>
+    <hostStar>Sun</hostStar>
+    <shortDescription>A small rocky planet with extreme temperature variations.</shortDescription>
+    <slug_id>mercury</slug_id>
+    <mass>0.055 Earth masses</mass>
+    <notableFeature>Closest planet to the Sun</notableFeature>
+    <constellation>N/A&quot;</constellation>
+  </planet>
+  <planet>
+    <id>Neptune</id>
+    <shortDescription>A distant blue world with extreme weather.</shortDescription>
+    <featured>false</featured>
+    <hostStar>Sun</hostStar>
+    <discovered>1846</discovered>
+    <constellation>N/A</constellation>
+    <slug_id>neptune</slug_id>
+    <mass>17 Earth masses</mass>
+    <notableFeature>Strongest winds in the Solar System</notableFeature>
+    <type>Ice Giant</type>
+    <imageURL>https://science.nasa.gov/wp-content/uploads/2024/03/pia01492-neptune-full-disk-16x9-1.jpg</imageURL>
+    <temperature>~-214°C</temperature>
+    <name>Neptune</name>
+    <distanceFromEarth>4.3 billion km</distanceFromEarth>
+    <diameter>3.9 Earth radii</diameter>
+  </planet>
+  <planet>
+    <id>Pluto</id>
+    <type>Dwarf Planet</type>
+    <imageURL>https://space-facts.com/wp-content/uploads/pluto.jpg</imageURL>
+    <diameter>0.18 Earth radii</diameter>
+    <distanceFromEarth>5.9 billion km</distanceFromEarth>
+    <temperature>~-229°C</temperature>
+    <name>Pluto</name>
+    <featured>true</featured>
+    <discovered>1930</discovered>
+    <hostStar>Sun</hostStar>
+    <shortDescription>A distant icy dwarf planet with a complex surface and thin atmosphere.</shortDescription>
+    <mass>0.0022 Earth masses</mass>
+    <slug_id>pluto</slug_id>
+    <notableFeature>Heart-shaped glacier (Tombaugh Regio)</notableFeature>
+    <constellation>N/A</constellation>
+  </planet>
+  <planet>
+    <id>Proxima_Centauri_b</id>
+    <imageURL>https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/15F7D/production/_116318998_capture.png.webp</imageURL>
+    <type>Terrestrial</type>
+    <temperature>Potentially habitable</temperature>
+    <name>Proxima Centauri b</name>
+    <diameter>Similar to Earth</diameter>
+    <distanceFromEarth>4.24 light years</distanceFromEarth>
+    <shortDescription>The closest known exoplanet to our solar system, orbiting Proxima Centauri.</shortDescription>
+    <featured>true</featured>
+    <discovered>2016</discovered>
+    <hostStar>Proxima Centauri</hostStar>
+    <constellation>Centaurus</constellation>
+    <mass>1.27 Earth masses</mass>
+    <slug_id>proxima-centauri-b</slug_id>
+    <notableFeature>Closest exoplanet to Earth</notableFeature>
+  </planet>
+  <planet>
+    <id>Saturn</id>
+    <type>Gas Giant</type>
+    <imageURL>https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg</imageURL>
+    <name>Saturn</name>
+    <temperature>~-178°C</temperature>
+    <distanceFromEarth>1.2 billion km</distanceFromEarth>
+    <diameter>9.45 Earth radii</diameter>
+    <shortDescription>A gas giant famous for its stunning rings.</shortDescription>
+    <hostStar>Sun</hostStar>
+    <discovered>Known since antiquity</discovered>
+    <featured>true</featured>
+    <constellation>N/A</constellation>
+    <notableFeature>Extensive ring system</notableFeature>
+    <mass>95 Earth masses</mass>
+    <slug_id>saturn</slug_id>
+  </planet>
+  <planet>
+    <id>TRAPPIST-1e</id>
+    <shortDescription>One of the most promising Earth-like planets in a nearby star system.</shortDescription>
+    <discovered>2017</discovered>
+    <hostStar>TRAPPIST-1</hostStar>
+    <featured>true</featured>
+    <constellation>Aquarius</constellation>
+    <notableFeature>Part of a multi-planet habitable system</notableFeature>
+    <mass>0.77 Earth masses</mass>
+    <slug_id>trappist-1e</slug_id>
+    <type>Terrestrial</type>
+    <imageURL>https://upload.wikimedia.org/wikipedia/commons/5/5f/TRAPPIST-1e_Artist%27s_Impression.png</imageURL>
+    <name>TRAPPIST-1e</name>
+    <temperature>Potentially habitable</temperature>
+    <diameter>Similar to Earth</diameter>
+    <distanceFromEarth>40 light years</distanceFromEarth>
+  </planet>
+  <planet>
+    <id>Uranus</id>
+    <constellation>N/A</constellation>
+    <notableFeature>Rotates on its side</notableFeature>
+    <mass>14.5 Earth masses</mass>
+    <slug_id>uranus</slug_id>
+    <shortDescription>An icy giant with a tilted rotation axis.</shortDescription>
+    <hostStar>Sun</hostStar>
+    <discovered>1781</discovered>
+    <featured>false</featured>
+    <name>Uranus</name>
+    <temperature>~-224°C</temperature>
+    <distanceFromEarth>2.6 billion km</distanceFromEarth>
+    <diameter>4 Earth radii</diameter>
+    <type>Ice Giant</type>
+    <imageURL>https://upload.wikimedia.org/wikipedia/commons/6/69/Uranus_Voyager2_color_calibrated.png</imageURL>
+  </planet>
+  <planet>
+    <id>Venus</id>
+    <notableFeature>Hottest planet in the Solar System</notableFeature>
+    <slug_id>venus</slug_id>
+    <mass>0.815 Earth masses</mass>
+    <contellation>N/A</contellation>
+    <shortDescription>A toxic world with a thick atmosphere and extreme greenhouse effect.</shortDescription>
+    <hostStar>Sun</hostStar>
+    <discovered>Known since antiquity</discovered>
+    <featured>true</featured>
+    <name>Venus</name>
+    <temperature>~465°C</temperature>
+    <distanceFromEarth>38 million km</distanceFromEarth>
+    <diameter>0.95 Earth radii</diameter>
+    <type>Terrestrial</type>
+    <imageURL>https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2024/03/venus-mariner-10-pia23791-fig2.jpg?w=1096&amp;h=1096&amp;fit=clip&amp;crop=faces%2Cfocalpoint</imageURL>
+  </planet>
+  <planet>
+    <id>WASP-12b</id>
+    <type>Hot Jupiter</type>
+    <imageURL>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHX6HMQgkLBynrXaF1dA6tSiAaYctzmc9nPQ&amp;s</imageURL>
+    <temperature>~2,500°C</temperature>
+    <name>WASP-12b</name>
+    <distanceFromEarth>1,400 light years</distanceFromEarth>
+    <diameter>~1.9 Jupiter radii</diameter>
+    <shortDescription>A planet so close to its star that it is being torn apart.</shortDescription>
+    <featured>false</featured>
+    <hostStar>WASP-12</hostStar>
+    <discovered>2008</discovered>
+    <constellation>Auriga</constellation>
+    <mass>1.4 Jupiter masses</mass>
+    <slug_id>wasp-12b</slug_id>
+    <notableFeature>Being consumed by its star</notableFeature>
+  </planet>
+</planets>

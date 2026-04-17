@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stars>
+  <star>
+    <id>Betelgeuse</id>
+    <distanceFromEarth>642 light years</distanceFromEarth>
+    <diameter>~1.2 billion km</diameter>
+    <temperature>~3,500°C</temperature>
+    <name>Betelgeuse</name>
+    <type>Red Supergiant</type>
+    <imageURL>https://www.sciencedaily.com/images/1920/sun-betelgeuse-star-comparison.webp</imageURL>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <slug_id>betelgeuse</slug_id>
+    <mass>11–20 solar masses</mass>
+    <notableFeature>Near supernova candidate</notableFeature>
+    <constellation>Orion</constellation>
+    <featured>true</featured>
+    <discovered>Ancient</discovered>
+    <shortDescription>A massive red supergiant star nearing the end of its life.</shortDescription>
+  </star>
+  <star>
+    <id>Proxima_Centuri</id>
+    <shortDescription>The nearest known star to the Sun and part of the Alpha Centauri system.</shortDescription>
+    <discovered>1915</discovered>
+    <featured>true</featured>
+    <constellation>Centaurus</constellation>
+    <notableFeature>Closest star to Earth (after the Sun)</notableFeature>
+    <slug_id>proxima-centauri</slug_id>
+    <mass>0.12 solar masses</mass>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <type>Red Dwarf</type>
+    <imageURL>https://www.almaobservatory.org/wp-content/uploads/2025/03/image.jpg</imageURL>
+    <name>Proxima Centauri</name>
+    <temperature>~3,042°C</temperature>
+    <diameter>~200,000 km</diameter>
+    <distanceFromEarth>4.24 light years</distanceFromEarth>
+  </star>
+  <star>
+    <id>Sirius</id>
+    <distanceFromEarth>8.6 light years</distanceFromEarth>
+    <diameter>~1.7 million km</diameter>
+    <name>Sirius</name>
+    <temperature>~9,940°C</temperature>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <imageURL>https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/releases/2005/12/STScI-01EVT7ZBQFE64FC5N0JH0M5J02.tif?w=4000&amp;h=3000&amp;fit=clip&amp;crop=faces%2Cfocalpoint</imageURL>
+    <type>Binary Star System</type>
+    <notableFeature>Brightest star in the night sky</notableFeature>
+    <mass>2.1 solar masses</mass>
+    <slug_id>sirius</slug_id>
+    <constellation>Canis Major</constellation>
+    <discovered>Ancient</discovered>
+    <featured>true</featured>
+    <shortDescription>The brightest star visible from Earth, located in the constellation Canis Major.</shortDescription>
+  </star>
+  <star>
+    <id>Vega</id>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <type>Main Sequence Star</type>
+    <imageURL>https://dq0hsqwjhea1.cloudfront.net/Vega-Stephen-Rahn-Wiki-CC-0-S.jpg</imageURL>
+    <name>Vega</name>
+    <temperature>~9,600°C</temperature>
+    <distanceFromEarth>25 light years</distanceFromEarth>
+    <diameter>~2.4 million km</diameter>
+    <shortDescription>A bright star used as a reference point in astronomy.</shortDescription>
+    <discovered>Ancient</discovered>
+    <featured>false</featured>
+    <constellation>Lyra</constellation>
+    <notableFeature>One of the brightest stars in the sky</notableFeature>
+    <slug_id>vega</slug_id>
+    <mass>2.1 solar masses</mass>
+  </star>
+  <star>
+    <id>sun</id>
+    <name>Sun</name>
+    <temperature>~5,500°C (surface)</temperature>
+    <diameter>1.39 million km</diameter>
+    <distanceFromEarth>149.6 million km</distanceFromEarth>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <imageURL>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcIXTlqqk8zigt9WenkVGHT7EtpiRe_19KIA&amp;s</imageURL>
+    <type>G-Type Main Sequence (G2V)</type>
+    <constellation>N/A</constellation>
+    <notableFeature>Closest star to Earth</notableFeature>
+    <slug_id>sun</slug_id>
+    <mass>1 solar mass</mass>
+    <shortDescription>The star at the center of our solar system that supports life on Earth.</shortDescription>
+    <discovered>Prehistoric</discovered>
+    <featured>true</featured>
+  </star>
+</stars>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missions>
+  <mission>
+    <id>Artemis_II</id>
+    <temperature>Extreme space conditions</temperature>
+    <slug_id>artemis-ii</slug_id>
+    <type>Crewed Lunar Mission</type>
+    <notableFeature>First crewed mission of the Artemis program</notableFeature>
+    <name>Artemis II</name>
+    <hostAgency>NASA</hostAgency>
+    <mass>Orion spacecraft ~26,500 kg</mass>
+    <diameter>Orion capsule ~5 meters</diameter>
+    <launchVehicle>Space Launch System (SLS)</launchVehicle>
+    <featured>true</featured>
+    <imageURL>https://upload.wikimedia.org/wikipedia/commons/1/16/Artemis_II_patch.svg</imageURL>
+    <distanceFromEarth>~450,000 km (lunar orbit)</distanceFromEarth>
+    <discovered>Planned launch 2025</discovered>
+    <shortDescription>NASA&apos;s first crewed mission to orbit the Moon since Apollo.</shortDescription>
+  </mission>
+  <mission>
+    <id>James_Webb_Space_Telescope(JWST)</id>
+    <discovered>Launched in 2021</discovered>
+    <shortDescription>A next-generation telescope observing the universe in infrared.</shortDescription>
+    <imageURL>https://cdn.mos.cms.futurecdn.net/v2/t:0,l:460,cw:2758,ch:2069,q:80,w:2560/NQRzVz58E3xE3i4Jvopew5.jpg</imageURL>
+    <distanceFromEarth>1.5 million km</distanceFromEarth>
+    <diameter>6.5 meters (mirror)</diameter>
+    <launchVehicle>Ariane 5</launchVehicle>
+    <featured>true</featured>
+    <mass>6,200 kg</mass>
+    <name>James Webb Space Telescope</name>
+    <hostAgency>NASA / ESA / CSA</hostAgency>
+    <type>Space Observatory</type>
+    <notableFeature>Most powerful space telescope ever built</notableFeature>
+    <temperature>~40 K (-233°C)</temperature>
+    <slug_id>james-webb</slug_id>
+  </mission>
+  <mission>
+    <id>Voyager 1</id>
+    <launchVehicle>Titan IIIE</launchVehicle>
+    <featured>true</featured>
+    <diameter>3.7 meters (antenna)</diameter>
+    <discovered>Launched in 1977</discovered>
+    <shortDescription>A spacecraft exploring interstellar space beyond our solar system.</shortDescription>
+    <distanceFromEarth>Over 24 billion km</distanceFromEarth>
+    <imageURL>https://img2.rtve.es/n/746282?w=1600</imageURL>
+    <notableFeature>Farthest human-made object</notableFeature>
+    <type>Interstellar Probe</type>
+    <temperature>Near absolute zero</temperature>
+    <slug_id>voyager-1</slug_id>
+    <mass>721 kg</mass>
+    <hostAgency>NASA</hostAgency>
+    <name>Voyager 1</name>
+  </mission>
+</missions>

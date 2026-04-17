@@ -1,0 +1,19 @@
+[
+  {
+    "id": "antares",
+    "mass": "~12 solar masses",
+    "discovered": "Ancient",
+    "shortDescription": "A massive red supergiant often called the heart of the Scorpion.",
+    "featured": false,
+    "diameter": "~1.0 billion km",
+    "hostGalaxy": "Milky Way",
+    "distanceFromEarth": "550 light years",
+    "name": "Antares",
+    "temperature": "~3,400°C",
+    "type": "Red Supergiant",
+    "slug_id": "antares",
+    "imageURL": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/4114/production/_97506661_3840.jpg.webp",
+    "notableFeature": "One of the largest visible stars",
+    "constellation": "Scorpius"
+  }
+]

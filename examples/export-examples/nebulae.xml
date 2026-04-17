@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nebulae>
+  <nebula>
+    <id>Carina_Nebula</id>
+    <discovered>1752</discovered>
+    <featured>true</featured>
+    <shortDescription>A vast and active star-forming region containing some of the most massive stars known.</shortDescription>
+    <notableFeature>Contains Eta Carinae, a massive unstable star</notableFeature>
+    <mass>Unknown</mass>
+    <slug_id>carina-nebula</slug_id>
+    <constellation>Carina</constellation>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <imageURL>https://helios-i.mashable.com/imagery/articles/04Vxo7xndP9LesUm5tcIn82/hero-image.fill.size_1248x702.v1658768995.jpg</imageURL>
+    <type>Emission Nebula</type>
+    <diameter>~300 light years</diameter>
+    <distanceFromEarth>8,500 light years</distanceFromEarth>
+    <name>Carina Nebula</name>
+    <temperature>~10,000 K</temperature>
+  </nebula>
+  <nebula>
+    <id>Crab_Nebula (M1)</id>
+    <mass>Unknown</mass>
+    <slug_id>crab-nebula</slug_id>
+    <notableFeature>~10,000 K</notableFeature>
+    <constellation>Taurus</constellation>
+    <featured>true</featured>
+    <discovered>1731</discovered>
+    <shortDescription>The expanding remains of a massive star explosion recorded by ancient astronomers.</shortDescription>
+    <diameter>~11 light years</diameter>
+    <distanceFromEarth>6,500 light years</distanceFromEarth>
+    <temperature>~10,000 K</temperature>
+    <name>Crab Nebula</name>
+    <imageURL>https://cdn.astrobin.com/images/2000/2023/623b77a6-0036-422b-9739-e5b5e7a37354.gif</imageURL>
+    <type>Supernova Remnant</type>
+    <hostGalaxy>Milky Way</hostGalaxy>
+  </nebula>
+  <nebula>
+    <id>Eagle_Nebula(M16)</id>
+    <discovered>1745</discovered>
+    <featured>true</featured>
+    <notableFeature>Pillars of Creation</notableFeature>
+    <slug_id>eagle-nebula</slug_id>
+    <mass>Unknown</mass>
+    <constellation>Serpens</constellation>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <type>Emission Nebula</type>
+    <imageURL>https://www.astronomy.com/wp-content/uploads/2023/03/14EagleNebula.jpg</imageURL>
+    <diameter>~70 light years</diameter>
+    <distanceFromEarth>7,000 light years</distanceFromEarth>
+    <name>Eagle Nebula</name>
+    <temperature>~9,000 K</temperature>
+    <shortDescription >Famous for the iconic Pillars of Creation captured by the Hubble Space Telescope.</shortDescription >
+  </nebula>
+  <nebula>
+    <id>Helix_Nebula</id>
+    <imageURL>https://fc08.deviantart.net/fs70/f/2012/077/2/e/the_helix_nebula_animated_stereo_by_apolonis-d4t59f8.gif</imageURL>
+    <type>Planetary Nebula</type>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <distanceFromEarth>655 light years</distanceFromEarth>
+    <diameter>~2.5 light years</diameter>
+    <temperature>~120,000 K (central star)</temperature>
+    <name>Helix Nebula</name>
+    <featured>false</featured>
+    <discovered>1824</discovered>
+    <shortDescription>A nearby planetary nebula formed from a dying star shedding its outer layers.</shortDescription>
+    <mass>Unknown</mass>
+    <slug_id>helix-nebula</slug_id>
+    <notableFeature>Often called the Eye of God</notableFeature>
+    <constellation>Aquarius</constellation>
+  </nebula>
+  <nebula>
+    <id>Hourglass_Nebula</id>
+    <discovered>1996 (Hubble image)</discovered>
+    <featured>true</featured>
+    <shortDescription>A stunning nebula shaped like an hourglass created by a dying star.</shortDescription>
+    <notableFeature>Symmetrical hourglass shape</notableFeature>
+    <mass>Unknown</mass>
+    <slug_id>hourglass-nebula</slug_id>
+    <constellation>Musca</constellation>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <type>Planetary Nebula</type>
+    <imageURL>https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2003/05/hourglass_nebula_a_planetary_nebula/9611464-3-eng-GB/Hourglass_Nebula_a_planetary_nebula_pillars.jpg</imageURL>
+    <diameter>~1 light year</diameter>
+    <distanceFromEarth>8,000 light year</distanceFromEarth>
+    <name>Hourglass Nebula</name>
+    <temperature>~100,000 K (central star)</temperature>
+  </nebula>
+  <nebula>
+    <id>Orion_Nebula(M42)</id>
+    <shortDescription>A massive star-forming region visible to the naked eye in the Orion constellation.</shortDescription>
+    <discovered>1610</discovered>
+    <featured>true</featured>
+    <constellation>Orion</constellation>
+    <notableFeature>One of the brightest and most studied star-forming regions</notableFeature>
+    <slug_id>orion-nebula</slug_id>
+    <mass>Unknown</mass>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <type>Diffuse Nebula</type>
+    <imageURL>https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/7423087/eso1625a.jpg?quality=90&amp;strip=all&amp;crop=0%2C15.455821233875%2C100%2C69.08835753225&amp;w=1200</imageURL>
+    <name>Orion Nebula</name>
+    <temperature>~10,000 K</temperature>
+    <distanceFromEarth>1,344 light years</distanceFromEarth>
+    <diameter>~24 light years</diameter>
+  </nebula>
+  <nebula>
+    <id>Pillars_of_Creation(Eagle_Nebula)</id>
+    <type>Emission Nebula (part of Eagle Nebula)</type>
+    <imageURL>https://media.tenor.com/fq5qeop4t0IAAAAe/pillars-of-creation-stars.png</imageURL>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <temperature>~9,000 K</temperature>
+    <name>Pillars of Creation</name>
+    <diameter>~5 light years</diameter>
+    <distanceFromEarth>7,000 light years</distanceFromEarth>
+    <shortDescription>Famous towering structures of gas and dust where new stars are born.</shortDescription>
+    <featured>true</featured>
+    <discovered>1995 (Hubble image)</discovered>
+    <constellation>Serpens</constellation>
+    <slug_id>pillars-of-creation</slug_id>
+    <mass>Unknown</mass>
+    <notableFeature>Iconic star-forming columns</notableFeature>
+  </nebula>
+  <nebula>
+    <id>Skull_Nebula(NGC_246)</id>
+    <imageURL>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTUer4jt7EBY48W2sIcQ_PN-r_6Kb1OM0T3Q&amp;s</imageURL>
+    <type>Planetary Nebula</type>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <temperature>~150,000 K (central star)</temperature>
+    <name>Skull Nebula</name>
+    <distanceFromEarth>1,600 light years</distanceFromEarth>
+    <diameter>~2 light years</diameter>
+    <shortDescription>A planetary nebula with a ghostly skull-like appearance.</shortDescription>
+    <featured>false</featured>
+    <discovered>1785</discovered>
+    <constellation>Cetus</constellation>
+    <mass>Unknown</mass>
+    <slug_id>skull-nebula</slug_id>
+    <notableFeature>Resembles a skull</notableFeature>
+  </nebula>
+  <nebula>
+    <id>Witch_Head_Nebula</id>
+    <distanceFromEarth>900 light years</distanceFromEarth>
+    <diameter>~50 light years</diameter>
+    <name>Witch Head Nebula</name>
+    <temperature>Cold dust cloud</temperature>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <type>Reflection Nebula</type>
+    <imageURL>https://astrobackyard.com/wp-content/uploads/2024/02/witch-head-nebula.jpg</imageURL>
+    <discoverer>Unknown</discoverer>
+    <notableFeature>Looks like a witch&apos;s face</notableFeature>
+    <mass>Unknown</mass>
+    <slug_id>witch-head-nebula</slug_id>
+    <constellation>Eridanus</constellation>
+    <featured>true</featured>
+    <shortDescription>A dark nebula illuminated by nearby stars forming a witch-like silhouette.</shortDescription>
+  </nebula>
+</nebulae>

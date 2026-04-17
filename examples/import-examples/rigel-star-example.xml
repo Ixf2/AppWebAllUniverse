@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stars>
+  <star>
+    <id>rigel</id>
+    <mass>~21 solar masses</mass>
+    <discovered>Ancient</discovered>
+    <shortDescription>A bright blue supergiant star in the Orion constellation.</shortDescription>
+    <featured>true</featured>
+    <diameter>~97 million km</diameter>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <distanceFromEarth>860 light years</distanceFromEarth>
+    <name>Rigel</name>
+    <temperature>~11,000°C</temperature>
+    <type>Blue Supergiant</type>
+    <slug_id>rigel</slug_id>
+    <imageURL>https://haloedukasi.com/wp-content/uploads/2021/08/Untitled-4.png</imageURL>
+    <notableFeature>One of the brightest stars in the night sky</notableFeature>
+    <constellation>Orion</constellation>
+  </star>
+</stars>

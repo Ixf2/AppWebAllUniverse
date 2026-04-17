@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blackHoles>
+  <blackHole>
+    <id>Cygnus_X-1</id>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <featured>false</featured>
+    <diameter>~124 km (event horizon)</diameter>
+    <discovered>1964</discovered>
+    <shortDescription>One of the first strong black hole candidates ever identified.</shortDescription>
+    <mass>21 solar masses</mass>
+    <constellation>Cygnus</constellation>
+    <slug_id>cygnus-x-1</slug_id>
+    <imageURL>https://scitechdaily.com/images/Cygnus-X-1-System.gif</imageURL>
+    <notableFeature>First widely accepted black hole candidate</notableFeature>
+    <name>Cygnus X-1</name>
+    <temperature>Extremely low</temperature>
+    <type>Stellar Black Hole</type>
+    <distanceFromEarth>6,070 light years</distanceFromEarth>
+  </blackHole>
+  <blackHole>
+    <id>GW150914</id>
+    <discovered>2015</discovered>
+    <shortDescription>The first direct detection of gravitational waves from merging black holes.</shortDescription>
+    <mass>36 and 29 solar masses (binary system)</mass>
+    <hostGalaxy>Unknown</hostGalaxy>
+    <diameter>~180 km (combined event horizon)</diameter>
+    <featured>false</featured>
+    <temperature>Extremely low</temperature>
+    <name>GW150914</name>
+    <type>Stellar Black Hole</type>
+    <distanceFromEarth>1.3 billion light years</distanceFromEarth>
+    <constellation>Unknown</constellation>
+    <imageURL>https://es.gizmodo.com/app/uploads/2022/08/d1140e89d0f7b832e306385f78a9b3b1.gif</imageURL>
+    <slug_id>gw150914</slug_id>
+    <notableFeature>First gravitational waves detection</notableFeature>
+  </blackHole>
+  <blackHole>
+    <id>M87*</id>
+    <diameter>~38 billion km (event horizon)</diameter>
+    <featured>true</featured>
+    <hostGalaxy>Messier 87</hostGalaxy>
+    <mass>6.5 billion solar masses</mass>
+    <discovered>1918 (galaxy), imaged in 2019</discovered>
+    <shortDescription>The first black hole ever photographed by the Event Horizon Telescope.</shortDescription>
+    <imageURL>https://francis.naukas.com/files/2020/09/D20200928-nature-d41586-020-02717-3-event-horizon-telescope-collaboration-gif-by-Nature-18408324.gif</imageURL>
+    <slug_id>m87-star</slug_id>
+    <notableFeature>First black hole ever imaged</notableFeature>
+    <constellation>Virgo</constellation>
+    <distanceFromEarth>53 million light years</distanceFromEarth>
+    <temperature>Extremely low (Hawking radiation negligible)</temperature>
+    <name>M87*</name>
+    <type>Supermassive Black Hole</type>
+  </blackHole>
+  <blackHole>
+    <id>TON618</id>
+    <hostGalaxy>Quasar TON 618</hostGalaxy>
+    <featured>true</featured>
+    <diameter>~390 billion km (event horizon)</diameter>
+    <shortDescription>An ultramassive black hole with an extreme mass far beyond typical supermassive ones.</shortDescription>
+    <discovered>1957</discovered>
+    <mass>66 billion solar masses</mass>
+    <constellation>Canes Venatici</constellation>
+    <notableFeature>One of the most massive black holes known</notableFeature>
+    <slug_id>ton-618</slug_id>
+    <imageURL>https://images.steamusercontent.com/ugc/1245756772856591011/BC2C1E58372416674D071B75373068B333EE5BC7/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false</imageURL>
+    <type>Ultramassive Black Hole</type>
+    <name>TON 618</name>
+    <temperature>Near absolute zero</temperature>
+    <distanceFromEarth>10.4 billion light years</distanceFromEarth>
+  </blackHole>
+  <blackHole>
+    <id>saggitarius</id>
+    <mass>4.3 million solar masses</mass>
+    <shortDescription>The supermassive black hole at the center of our galaxy.</shortDescription>
+    <discovered>1974 (radio source)</discovered>
+    <featured>true</featured>
+    <diameter>≈ 24 million km (event horizon)</diameter>
+    <hostGalaxy>Milky Way</hostGalaxy>
+    <distanceFromEarth>26,700 light years</distanceFromEarth>
+    <type>Supermassive Black Hole</type>
+    <name>Sagittarius A*</name>
+    <temperature>≈ near absolute zero (Hawking radiation negligible)</temperature>
+    <notableFeature>Central black hole of the Milky Way</notableFeature>
+    <slug_id>sagittarius-a-star</slug_id>
+    <imageURL>https://fotografias.lasexta.com/clipping/cmsimages01/2023/05/05/6EA27988-791E-4A3F-9404-B6B010FEEC4F/recreacion-agujero-negro_98.jpg?crop=1777,1000,x113,y0&amp;width=1900&amp;height=1069&amp;optimize=high&amp;format=webply</imageURL>
+    <constellation>Sagittarius</constellation>
+  </blackHole>
+</blackHoles>
