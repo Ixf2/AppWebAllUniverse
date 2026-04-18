@@ -4,6 +4,10 @@ import {
   exportToJSON,
   exportToCSV,
   exportToXML,
+  exportToTXT,
+  exportToHTML,
+  exportToXLSX,
+  exportToPDF,
 } from "../../utils-elements/ExportData";
 import ImportElements from "../import-elements/ImportElements";
 
@@ -45,6 +49,21 @@ function NewsElements({ title, elements = [], type, onRefresh }) {
               }
             >
               XML
+            </button>
+            <button onClick={() => exportToTXT(elements, `${type}.txt`)}>
+              TXT
+            </button>
+
+            <button onClick={() => exportToHTML(elements, `${type}.html`)}>
+              HTML
+            </button>
+
+            <button onClick={() => exportToXLSX(elements, `${type}.xlsx`)}>
+              XLSX
+            </button>
+
+            <button onClick={() => exportToPDF(elements, `${type}.pdf`)}>
+              PDF
             </button>
 
             <button onClick={() => setIsImportOpen(true)}>Import</button>
@@ -165,7 +184,8 @@ function NewsElements({ title, elements = [], type, onRefresh }) {
 
             <h3 className="import-modal-title">Import into {title}</h3>
             <p className="import-modal-text">
-              Select a JSON, CSV or XML file to import into this collection.
+              Select a JSON, CSV, XML, TXT, XLSX or HTML file to import into
+              this collection.
             </p>
 
             <ImportElements

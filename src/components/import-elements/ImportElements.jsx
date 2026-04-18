@@ -3,6 +3,9 @@ import {
   importJSONFile,
   importCSVFile,
   importXMLFile,
+  importTXTFile,
+  importXLSXFile,
+  importHTMLFile,
 } from "../../utils-elements/Import";
 import "./ImportElements.css";
 
@@ -38,6 +41,18 @@ function ImportElements({ type, onImported }) {
         await importXMLFile(file, type, xmlItemMap[type]);
       }
 
+      if (format === "txt") {
+        await importTXTFile(file, type);
+      }
+
+      if (format === "xlsx") {
+        await importXLSXFile(file, type);
+      }
+
+      if (format === "html") {
+        await importHTMLFile(file, type);
+      }
+
       setStatus("success");
       setMessage("Import completed successfully");
 
@@ -53,6 +68,15 @@ function ImportElements({ type, onImported }) {
     }
   };
 
+  const acceptedFormats = {
+    json: ".json",
+    csv: ".csv",
+    xml: ".xml",
+    txt: ".txt",
+    xlsx: ".xlsx,.xls",
+    html: ".html,.htm",
+  };
+
   return (
     <div className="import-elements">
       <select
@@ -63,11 +87,14 @@ function ImportElements({ type, onImported }) {
         <option value="json">JSON</option>
         <option value="csv">CSV</option>
         <option value="xml">XML</option>
+        <option value="txt">TXT</option>
+        <option value="xlsx">XLSX</option>
+        <option value="html">HTML</option>
       </select>
 
       <input
         type="file"
-        accept=".json,.csv,.xml"
+        accept={acceptedFormats[format]}
         onChange={handleFileChange}
         disabled={status === "loading"}
       />

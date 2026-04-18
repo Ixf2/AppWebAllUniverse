@@ -1,0 +1,15 @@
+id: HAT-P-67b
+slug_id: hat_p_67b
+diameter: ~2.1 Jupiter radii
+constellation: Hercules
+mass: ~0.34 Jupiter masses
+shortDescription: An extremely inflated exoplanet with a very low density and a highly extended atmosphere.
+discovered: 2017
+name: HAT-P-67b
+distanceFromEarth: ~1,200 light years
+notableFeature: One of the largest known exoplanets in size but with very low density
+type: Gas Giant Exoplanet
+imageURL: https://www.astronomy.com/wp-content/uploads/2026/03/Exo-Planet_K2-18_b-768x512.png
+featured: false
+temperature: ~1,900°C
+hostStar: HAT-P-67

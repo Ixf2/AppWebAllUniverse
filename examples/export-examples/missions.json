@@ -1,0 +1,53 @@
+[
+  {
+    "id": "Artemis_II",
+    "temperature": "Extreme space conditions",
+    "slug_id": "artemis-ii",
+    "type": "Crewed Lunar Mission",
+    "notableFeature": "First crewed mission of the Artemis program",
+    "name": "Artemis II",
+    "hostAgency": "NASA",
+    "mass": "Orion spacecraft ~26,500 kg",
+    "diameter": "Orion capsule ~5 meters",
+    "launchVehicle": "Space Launch System (SLS)",
+    "featured": true,
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/1/16/Artemis_II_patch.svg",
+    "distanceFromEarth": "~450,000 km (lunar orbit)",
+    "discovered": "Planned launch 2025",
+    "shortDescription": "NASA's first crewed mission to orbit the Moon since Apollo."
+  },
+  {
+    "id": "James_Webb_Space_Telescope(JWST)",
+    "discovered": "Launched in 2021",
+    "shortDescription": "A next-generation telescope observing the universe in infrared.",
+    "imageURL": "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:460,cw:2758,ch:2069,q:80,w:2560/NQRzVz58E3xE3i4Jvopew5.jpg",
+    "distanceFromEarth": "1.5 million km",
+    "diameter": "6.5 meters (mirror)",
+    "launchVehicle": "Ariane 5",
+    "featured": true,
+    "mass": "6,200 kg",
+    "name": "James Webb Space Telescope",
+    "hostAgency": "NASA / ESA / CSA",
+    "type": "Space Observatory",
+    "notableFeature": "Most powerful space telescope ever built",
+    "temperature": "~40 K (-233°C)",
+    "slug_id": "james-webb"
+  },
+  {
+    "id": "Voyager 1",
+    "launchVehicle": "Titan IIIE",
+    "featured": true,
+    "diameter": "3.7 meters (antenna)",
+    "discovered": "Launched in 1977",
+    "shortDescription": "A spacecraft exploring interstellar space beyond our solar system.",
+    "distanceFromEarth": "Over 24 billion km",
+    "imageURL": "https://img2.rtve.es/n/746282?w=1600",
+    "notableFeature": "Farthest human-made object",
+    "type": "Interstellar Probe",
+    "temperature": "Near absolute zero",
+    "slug_id": "voyager-1",
+    "mass": "721 kg",
+    "hostAgency": "NASA",
+    "name": "Voyager 1"
+  }
+]

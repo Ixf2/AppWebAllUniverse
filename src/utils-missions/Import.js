@@ -1,5 +1,6 @@
 import { collection, doc, setDoc, addDoc } from "firebase/firestore";
 import Papa from "papaparse";
+import * as XLSX from "xlsx";
 import { db } from "../services/firebase/Firebase";
 
 export async function importArrayToFirestore(data, collectionName) {
@@ -9,60 +10,103 @@ export async function importArrayToFirestore(data, collectionName) {
 
   for (const item of data) {
     if (item.slug_id) {
-      const ref = doc(db, collectionName, item.slug_id);
-      await setDoc(ref, item);
+      await setDoc(doc(db, collectionName, item.slug_id), item);
     } else if (item.name) {
-      const safeId = item.name.toLowerCase().replace(/\s+/g, "_");
-      const ref = doc(db, collectionName, safeId);
-      await setDoc(ref, item);
+      const id = item.name.toLowerCase().replace(/\s+/g, "_");
+      await setDoc(doc(db, collectionName, id), item);
     } else {
       await addDoc(collection(db, collectionName), item);
     }
   }
 }
 
+// JSON______________________________________________________________
 export async function importJSONFile(file, collectionName) {
-  const text = await file.text();
-  const data = JSON.parse(text);
+  const data = JSON.parse(await file.text());
   await importArrayToFirestore(data, collectionName);
 }
 
+// CSV______________________________________________________________
 export async function importCSVFile(file, collectionName) {
-  const text = await file.text();
-
-  const result = Papa.parse(text, {
+  const { data, errors } = Papa.parse(await file.text(), {
     header: true,
     skipEmptyLines: true,
   });
 
-  if (result.errors.length) {
-    console.error("CSV parse errors:", result.errors);
-    throw new Error("Error parsing CSV file");
-  }
+  if (errors.length) throw new Error("Error parsing CSV file");
 
-  await importArrayToFirestore(result.data, collectionName);
+  await importArrayToFirestore(data, collectionName);
 }
 
-export async function importXMLFile(file, collectionName, itemTag = "mission") {
-  const text = await file.text();
+// XML______________________________________________________________
+export async function importXMLFile(file, collectionName, itemTag = "item") {
+  const xml = new DOMParser().parseFromString(await file.text(), "application/xml");
 
-  const parser = new DOMParser();
-  const xmlDoc = parser.parseFromString(text, "application/xml");
-
-  const parserError = xmlDoc.querySelector("parsererror");
-  if (parserError) {
+  if (xml.querySelector("parsererror")) {
     throw new Error("Invalid XML file");
   }
 
-  const nodes = [...xmlDoc.getElementsByTagName(itemTag)];
-
-  const data = nodes.map((node) => {
+  const data = [...xml.getElementsByTagName(itemTag)].map((node) => {
     const obj = {};
+    [...node.children].forEach((c) => (obj[c.tagName] = c.textContent));
+    return obj;
+  });
 
-    [...node.children].forEach((child) => {
-      obj[child.tagName] = child.textContent;
+  await importArrayToFirestore(data, collectionName);
+}
+
+// TXT______________________________________________________________
+export async function importTXTFile(file, collectionName) {
+  const data = (await file.text())
+    .split(/\n\s*\n/)
+    .map((block) => {
+      const obj = {};
+      block.split("\n").forEach((line) => {
+        const i = line.indexOf(":");
+        if (i > -1) obj[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+      });
+      return obj;
+    })
+    .filter((o) => Object.keys(o).length);
+
+  if (!data.length) throw new Error("Invalid TXT file");
+
+  await importArrayToFirestore(data, collectionName);
+}
+
+// XLSX______________________________________________________________
+export async function importXLSXFile(file, collectionName) {
+  const wb = XLSX.read(await file.arrayBuffer(), { type: "array" });
+
+  const data = XLSX.utils.sheet_to_json(
+    wb.Sheets[wb.SheetNames[0]],
+    { defval: "" }
+  );
+
+  if (!data.length) throw new Error("Empty XLSX file");
+
+  await importArrayToFirestore(data, collectionName);
+}
+
+// HTML______________________________________________________________
+export async function importHTMLFile(file, collectionName) {
+  const doc = new DOMParser().parseFromString(await file.text(), "text/html");
+
+  const headers = [...doc.querySelectorAll("thead th")].map((th) =>
+    th.textContent.trim()
+  );
+
+  const rows = [...doc.querySelectorAll("tbody tr")];
+
+  if (!headers.length || !rows.length) {
+    throw new Error("Invalid HTML table");
+  }
+
+  const data = rows.map((row) => {
+    const obj = {};
+    [...row.querySelectorAll("td")].forEach((td, i) => {
+      obj[headers[i]] = td.textContent.trim();
     });
-
     return obj;
   });
 

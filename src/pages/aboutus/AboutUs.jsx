@@ -10,6 +10,12 @@ import LoadingScreen from "../../components/loadingscreen/LoadingScreen"
 
 const team = [
   {
+    name: "Iara Ramirez",
+    role: "Asesora",
+    bio: "Strategic advisor who played a key role in shaping the conceptual foundation of AllUniverse. She contributed valuable insights and provided reliable information about the thematic focus, helping the team align scientific accuracy with creative vision. Her guidance ensured that the project communicates its ideas clearly while staying grounded in meaningful and well-structured content.",
+    image: AvatarIara,
+  },
+  {
     name: "Joana Ramirez",
     role: "Senior Frontend Developer",
     bio: "Interface architect who turns complex ideas into seamless experiences. Specialized in performance and scalable systems, ensuring every interaction in AllUniverse is fast, intuitive, and visually polished.",
@@ -40,7 +46,7 @@ export default function AboutUs() {
   return (
     <>
       <Header />
-      <LoadingScreen isDataLoaded={true}/>
+      <LoadingScreen isDataLoaded={true} />
       <main className="about-page">
 
         <section className="about-hero">
@@ -50,12 +56,12 @@ export default function AboutUs() {
           <div className="about-hero-text">
             <span className="about-eyebrow">Who we are</span>
             <div className="hero-header-group">
-            <h1>Built by explorers,<br />for explorers</h1>
-            <p>
-              AllUniverse is an independent educational project born from a shared
-              obsession with the cosmos. We translate the complexity of space into
-              stories, visuals, and interactive experiences anyone can enjoy.
-            </p>
+              <h1>Built by explorers,<br />for explorers</h1>
+              <p>
+                AllUniverse is an independent educational project born from a shared
+                obsession with the cosmos. We translate the complexity of space into
+                stories, visuals, and interactive experiences anyone can enjoy.
+              </p>
             </div>
           </div>
         </section>

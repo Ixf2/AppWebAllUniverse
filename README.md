@@ -4,7 +4,7 @@
 
 **AllWebAllUniverse** is a web application focused on exploring the universe. It provides structured information about different cosmic elements such as planets, stars, nebulae, and black holes, along with their characteristics and curiosities.
 
-The platform also includes a missions section that highlights important space explorations and a commemorative tribute dedicated to the animals whose sacrifice contributed to humanity’s progress in space exploration.
+The platform also includes a missions section that highlights important space explorations and a commemorative tribute dedicated to the animals whose sacrifice contributed to humanity's progress in space exploration.
 
  **Live Demo:** https://appweballuniverse.web.app
 
@@ -16,6 +16,9 @@ The platform also includes a missions section that highlights important space ex
 
 ### Footer
 ![Footer](./screenshot/footer.png)
+
+### About
+![About](./screenshot/about.png)
 
 ###  Elements
 ![Elements](./screenshot/elements.png)
@@ -53,8 +56,17 @@ The platform also includes a missions section that highlights important space ex
 -  Tribute page dedicated to alls animals, like Laika, Félicette, and Ham
 
 -  Data management:
-  - Import and export data in **JSON, XML, and CSV**
+  - Import data in **JSON, XML, CSV, TXT, XLSX, and HTML**
+  - Export data in **JSON, XML, CSV, TXT, HTML, XLSX, and PDF**
   - Direct integration with **Firebase Firestore**
+
+-  News system with categorized articles per cosmic element and mission type
+
+-  **About Us** page with team profiles, project mission, and a project timeline
+
+-  Custom **404 Not Found** page with background video
+
+-  Video modal popup — inline tribute video player for the Pioneers tribute
 
 -  Dynamic content loading
 
@@ -79,8 +91,12 @@ The platform also includes a missions section that highlights important space ex
 
 - **Data Handling**
   - JSON
-  - XML (via `DOMPaper`)
+  - XML (via `xml2js` and `DOMParser`)
   - CSV (via `papaparse`)
+  - XLSX (via `xlsx`)
+  - TXT
+  - HTML (via `autotable`)
+  - PDF export (via `jspdf` + `jspdf-autotable`)
 
 - **Development Tools**
   - ESLint
@@ -88,32 +104,45 @@ The platform also includes a missions section that highlights important space ex
 ---
 
 ##  Project Structure
-└───src <br>
-    ├───assets <br>
-    ├───components <br>
-    │   ├───card <br>
-    │   ├───footer <br>
-    │   ├───header <br>
-    │   ├───import-elements <br>
-    │   ├───loadingscreen <br>
-    │   ├───news-elements <br>
-    │   ├───news-missions <br>
-    │   ├───scroll-to-top <br>
-    │   ├───scroll-to-top-button <br>
-    │   └───windows-modal <br>
+```
+└───src
+    ├───components
+    │   ├───card
+    │   ├───footer
+    │   ├───header
+    │   ├───import-elements
+    │   ├───import-missions
+    │   ├───loadingscreen
+    │   ├───news-elements
+    │   ├───news-missions
+    │   ├───scroll-to-top
+    │   ├───scroll-to-top-button
+    │   └───windows-modal
     ├───data
-    │   ├───images <br>
-    │   └───video <br>
-    ├───pages <br>
-    │   ├───aboutus <br>
-    │   ├───elements <br>
-    │   ├───home <br>
-    │   ├───legal <br>
-    │   ├───missions <br>
-    │   └───notfound <br>
-    ├───services <br>
-    │   └───firebase <br>
-    └───utils-elements <br>
+    │   ├───images
+    │   └───video
+    ├───pages
+    │   ├───aboutus
+    │   ├───elements
+    │   ├───home
+    │   ├───legal
+    │   ├───missions
+    │   └───notfound
+    ├───services
+    │   └───firebase
+    ├───utils-elements
+    └───utils-missions
+```
+
+Additionally, the repository includes an `examples/` folder with sample files for both import and export:
+
+```
+examples/
+├───export-examples/       # Sample exported files (planets, stars, nebulae, black_hole, missions)
+│   └─── *.csv / *.json / *.xml
+└───import-examples/       # Template files for importing data
+    └─── *.csv / *.json / *.xml / *.txt / *.html
+```
 
 ---
 
@@ -132,12 +161,18 @@ git clone https://github.com/Ixf2/AppWebAllUniverse.git
 cd AppWebAllUniverse
 ```
 
-3. Install dependencies:
+3. Set up environment variables:
+```bash
+cp .envi.example .env
+```
+Fill in your Firebase project credentials in `.env`.
+
+4. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Run the development server:
+5. Run the development server:
 ```bash
 npm run dev
 ```
@@ -153,7 +188,7 @@ npm run preview
 ```
 
 ## Deployment
-This project if gully deployed using Firebase Hosting.
+This project is fully deployed using Firebase Hosting.
 To deploy manually:
 ```bash
 firebase deploy --only hosting
@@ -163,21 +198,33 @@ firebase deploy --only hosting
 All data is stored and managed using:
 - Firebase Firestore
 
-The application support improting structured data formats:
+The application supports importing structured data in the following formats:
 - JSON
 - XML
 - CSV
+- TXT
+- XLSX
+- HTML
+
+And exporting in:
+- JSON
+- XML
+- CSV
+- TXT
+- HTML
+- XLSX
+- PDF
 
 ## Purpose
 The main goal of this project is to:
 - Provide educational content about the universe.
 - Demonstrate integration of modern web technologies.
-- Practice data handling and cloud-based sotrage (Firebase).
+- Practice data handling and cloud-based storage (Firebase).
 - Honor the historical contribution of animals in space exploration.
 
 ---
 ## License
-This project is licensed under the ISC Lincense
+This project is licensed under the ISC License
 
 ---
 
@@ -200,7 +247,11 @@ GitHub: https://github.com/sdvictorvergara
 - React Router DOM: https://reactrouter.com/
 - React Icons: https://react-icons.github.io/react-icons/
 - PapaParse (CSV): https://www.papaparse.com/
-- DOMPaper (XML DOMpaper): https://developer.mozilla.org/es/docs/Web/API/DOMParser
+- DOMParser (XML): https://developer.mozilla.org/es/docs/Web/API/DOMParser
+- xml2js: https://github.com/Leonidas-from-XIV/node-xml2js
+- SheetJS / xlsx: https://sheetjs.com/
+- jsPDF: https://github.com/parallax/jsPDF
+- jsPDF-AutoTable: https://github.com/simonbengtsson/jsPDF-AutoTable
 
 ###  Design
 - Figma: https://www.figma.com/
