@@ -4,6 +4,10 @@ import {
   exportToJSON,
   exportToCSV,
   exportToXML,
+  exportToTXT,
+  exportToHTML,
+  exportToXLSX,
+  exportToPDF,
 } from "../../utils-missions/ExportData";
 import ImportMissions from "../import-missions/ImportMissions";
 
@@ -43,6 +47,22 @@ function NewsMissions({ missions = [], onRefresh }) {
               }
             >
               XML
+            </button>
+
+            <button onClick={() => exportToTXT(missions, "missions.txt")}>
+              TXT
+            </button>
+
+            <button onClick={() => exportToHTML(missions, "missions.html")}>
+              HTML
+            </button>
+
+            <button onClick={() => exportToXLSX(missions, "missions.xlsx")}>
+              XLSX
+            </button>
+
+            <button onClick={() => exportToPDF(missions, "missions.pdf")}>
+              PDF
             </button>
 
             <button onClick={() => setIsImportOpen(true)}>Import</button>
