@@ -22,12 +22,6 @@ const team = [
     image: AvatarJoana,
   },
   {
-    name: "Iara Ramirez",
-    role: "Asesora",
-    bio: "Strategic advisor who played a key role in shaping the conceptual foundation of AllUniverse. She contributed valuable insights and provided reliable information about the thematic focus, helping the team align scientific accuracy with creative vision. Her guidance ensured that the project communicates its ideas clearly while staying grounded in meaningful and well-structured content.",
-    image: AvatarIara,
-  },
-  {
     name: "Víctor Vergara",
     role: "Junior Frontend Developer",
     bio: "Passionate about science and design, she transforms space data into engaging visual stories. Her approach blends scientific curiosity with creativity to make every discovery easy to explore and understand.",
