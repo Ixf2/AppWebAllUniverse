@@ -3,22 +3,23 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import { FaStar, FaRocket, FaGlobe, FaSatellite } from "react-icons/fa";
 import AvatarJoana from "../../data/images/avatar-joana.png"
+import AvatarIara from "../../data/images/avatar-iara.jpg"
 import AvatarVictor from "../../data/images/avatar-victor.jpg"
 import "./AboutUs.css";
 import LoadingScreen from "../../components/loadingscreen/LoadingScreen"
 
 const team = [
   {
-    name: "Joana Ramirez",
-    role: "Senior Frontend Developer",
-    bio: "Interface architect who turns complex ideas into seamless experiences. Specialized in performance and scalable systems, ensuring every interaction in AllUniverse is fast, intuitive, and visually polished.",
-    image: AvatarJoana,
-  },
-  {
     name: "Iara Ramirez",
     role: "Asesora",
     bio: "Strategic advisor who played a key role in shaping the conceptual foundation of AllUniverse. She contributed valuable insights and provided reliable information about the thematic focus, helping the team align scientific accuracy with creative vision. Her guidance ensured that the project communicates its ideas clearly while staying grounded in meaningful and well-structured content.",
     image: AvatarIara,
+  },
+  {
+    name: "Joana Ramirez",
+    role: "Senior Frontend Developer",
+    bio: "Interface architect who turns complex ideas into seamless experiences. Specialized in performance and scalable systems, ensuring every interaction in AllUniverse is fast, intuitive, and visually polished.",
+    image: AvatarJoana,
   },
   {
     name: "Víctor Vergara",
