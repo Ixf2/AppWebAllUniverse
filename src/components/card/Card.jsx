@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
 import "./Card.css"
 
 function Card({ item }) {
   return (
-    <Link to={`/news/${item.slug_id || item.id}`} className="news-card">
+      <div className="news-card">
       <div className="news-card-media">
         {item.imageURL ? (
           <img
-            src={item.imageURL}
-            alt={item.title}
-            className="news-card-image"
+          src={item.imageURL}
+          alt={item.title}
+          className="news-card-image"
           />
         ) : (
           <div className="news-card-image" />
@@ -22,7 +21,7 @@ function Card({ item }) {
         <p className="news-card-description">{item.description}</p>
         <div className="news-card-bottom-line"></div>
       </div>
-    </Link>
+        </div>
   );
 }
 
