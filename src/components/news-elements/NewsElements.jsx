@@ -184,7 +184,8 @@ function NewsElements({ title, elements = [], type, onRefresh }) {
 
             <h3 className="import-modal-title">Import into {title}</h3>
             <p className="import-modal-text">
-              Select a JSON, CSV or XML file to import into this collection.
+              Select a JSON, CSV, XML, TXT, XLSX or HTML file to import into
+              this collection.
             </p>
 
             <ImportElements

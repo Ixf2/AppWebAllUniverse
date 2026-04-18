@@ -1,5 +1,6 @@
 import { collection, doc, setDoc, addDoc } from "firebase/firestore";
 import Papa from "papaparse";
+import * as XLSX from "xlsx";
 import { db } from "../services/firebase/Firebase";
 
 export async function importArrayToFirestore(data, collectionName) {
@@ -61,6 +62,86 @@ export async function importXMLFile(file, collectionName, itemTag = "item") {
 
     [...node.children].forEach((child) => {
       obj[child.tagName] = child.textContent;
+    });
+
+    return obj;
+  });
+
+  await importArrayToFirestore(data, collectionName);
+}
+
+export async function importTXTFile(file, collectionName) {
+  const text = await file.text();
+
+  const blocks = text
+    .split(/\n\s*\n/)
+    .map((block) => block.trim())
+    .filter(Boolean);
+
+  const data = blocks.map((block) => {
+    const obj = {};
+
+    block.split("\n").forEach((line) => {
+      const separatorIndex = line.indexOf(":");
+      if (separatorIndex !== -1) {
+        const key = line.slice(0, separatorIndex).trim();
+        const value = line.slice(separatorIndex + 1).trim();
+        obj[key] = value;
+      }
+    });
+
+    return obj;
+  });
+
+  if (!data.length) {
+    throw new Error("TXT file is empty or invalid");
+  }
+
+  await importArrayToFirestore(data, collectionName);
+}
+
+export async function importXLSXFile(file, collectionName) {
+  const arrayBuffer = await file.arrayBuffer();
+  const workbook = XLSX.read(arrayBuffer, { type: "array" });
+
+  const firstSheetName = workbook.SheetNames[0];
+  const worksheet = workbook.Sheets[firstSheetName];
+
+  const data = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+
+  if (!data.length) {
+    throw new Error("XLSX file is empty");
+  }
+
+  await importArrayToFirestore(data, collectionName);
+}
+
+export async function importHTMLFile(file, collectionName) {
+  const text = await file.text();
+
+  const parser = new DOMParser();
+  const htmlDoc = parser.parseFromString(text, "text/html");
+
+  const table = htmlDoc.querySelector("table");
+  if (!table) {
+    throw new Error("HTML file does not contain a table");
+  }
+
+  const headerCells = [...table.querySelectorAll("thead th")];
+  const bodyRows = [...table.querySelectorAll("tbody tr")];
+
+  if (!headerCells.length || !bodyRows.length) {
+    throw new Error("HTML table is incomplete");
+  }
+
+  const headers = headerCells.map((th) => th.textContent.trim());
+
+  const data = bodyRows.map((row) => {
+    const cells = [...row.querySelectorAll("td")];
+    const obj = {};
+
+    headers.forEach((header, index) => {
+      obj[header] = cells[index]?.textContent.trim() ?? "";
     });
 
     return obj;
